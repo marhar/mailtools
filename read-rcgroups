@@ -1,0 +1,97 @@
+#!/usr/bin/env python
+"""
+read-rcgroups -- read new messages on rcgroups.com
+
+rcgroups sends a set of nightly emails (one per subscribed thread)
+telling you whats new to be read.
+
+this program grabs those messages, opens the threads in your browser,
+and deletes the messages.  Don't be alarmed if it opens a lot of tabs.
+
+This is part of the mailtools package :  (c) 2015 Mark Harrison.
+https://github.com/marhar/mailtools   :  Share and Enjoy!
+"""
+
+import re,time,os,email
+import mailcfg
+
+#-----------------------------------------------------------------------
+re_subj=re.compile(r'^Subject: (.*)$')
+re_http=re.compile(r'^(http://.*)$')
+re_thread=re.compile(r'^(You are subscribed to the thread.*)')
+re_forum=re.compile(r'^You are subscribed to the forum[^,]*, (.*)')
+
+#-----------------------------------------------------------------------
+def open(url):
+    """open the url.  this is coded for mac which is what I use"""
+    # this is for mac.
+    # if you use this on another OS let me know what works!
+
+    os.system("open '%s'"%(url))
+    time.sleep(.25)  # this delay seems to make everything smoother
+
+
+#-----------------------------------------------------------------------
+def url(s):
+    """look for the strings that indicate unread forums or threads"""
+    subj=None
+    http=None
+    thread=None
+    forum=None
+
+    for x in s.split('\r\n'):
+
+        mm=re_subj.search(x)
+        if mm:
+            subj=mm.group(1)
+
+        mm=re_thread.search(x)
+        if mm:
+            thread=mm.group(1)
+
+        mm=re_forum.search(x)
+        if mm:
+            forum=mm.group(1)
+
+        mm=re_http.search(x)
+        if mm:
+            http=mm.group(1)
+            http=http.replace(' ','')
+            http+='&goto=newpost'
+            break
+    if subj:
+        subj=re.sub('" update.*$','',subj)
+        subj=re.sub('^[^"]*"','',subj)
+
+    return http
+
+#-----------------------------------------------------------------------
+def main():
+    """the main thing"""
+    m=mailcfg.imapserver()
+    rc,data=m.select('inbox')
+    mailcfg.ok(rc,data)
+
+    rc,data=m.search(None, '(FROM "web@rcgroups.com")')
+    mailcfg.ok(rc,data)
+
+    seen={}
+    for msgno in data[0].split():
+        rc,data=m.fetch(msgno,'(RFC822)')
+        mailcfg.ok(rc,data)
+        body=email.message_from_string(data[0][1])
+        h=url(str(body))
+        if seen.has_key(h) == False:
+            seen[h] = 1
+            print h
+            open(h)
+        m.store(msgno, '+FLAGS', '\Deleted')
+
+    m.close()
+    m.logout()
+
+#-----------------------------------------------------------------------
+try:
+    main()
+except KeyboardInterrupt:
+    pass

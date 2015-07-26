@@ -1,10 +1,34 @@
 #!/usr/bin/env python
 """
 mailcfg -- some stuff to manage mail servers
+
+Generally handy tools for dealing with mail processing programs
+
+This is part of the mailtools package :  (c) 2015 Mark Harrison.
+https://github.com/marhar/mailtools   :  Share and Enjoy!
 """
 
 import os
 import imaplib
+
+#-----------------------------------------------------------------------
+class MailtoolsError(Exception):
+    """standard exception for Mailtools package"""
+    def __init__(self, msg):
+        self.msg = msg
+    def __str__(self):
+        return repr(self.msg)
+
+#-----------------------------------------------------------------------
+class MailtoolsIMAPError(MailtoolsError):
+    """indicates an unusual (non-OK) IMAP response"""
+    pass
+
+#-----------------------------------------------------------------------
+def ok(rc,data):
+    """raises exception if return code is not 'OK'"""
+    if rc != 'OK':
+        raise MailtoolsIMAPError(data)
 
 #-----------------------------------------------------------------------
 def imapserver(fname=None):
@@ -25,7 +49,7 @@ def imapserver(fname=None):
     # imap file can't be readable by other people!
     s=os.stat(fname)
     if s.st_mode & 0077 != 0:
-        raise RuntimeError('.imap file must not be readable by others')
+        raise MailtoolsError('.imap file must not be readable by others')
 
     x={}
     execfile(fname,x)
