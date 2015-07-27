@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 """
+#-----------------------------------------------------------------------
 mailcfg -- some stuff to manage mail servers
 
 Generally handy tools for dealing with mail processing programs
 
-This is part of the mailtools package :  (c) 2015 Mark Harrison.
-https://github.com/marhar/mailtools   :  Share and Enjoy!
+This is part of the mailtools package : (c) 2015 Mark Harrison.
+https://github.com/marhar/mailtools   :     Share and Enjoy!
 """
 
-import os
-import imaplib
+import os,imaplib,ConfigParser
 
 #-----------------------------------------------------------------------
 class MailtoolsError(Exception):
@@ -26,22 +26,26 @@ class MailtoolsIMAPError(MailtoolsError):
 
 #-----------------------------------------------------------------------
 def ok(rc,data):
-    """raises exception if return code is not 'OK'"""
+    """raises exception if IMAP return code is not 'OK'
+       this typically should not occur and indicates either
+       a coding problem or unexpected server operation.
+    """
     if rc != 'OK':
         raise MailtoolsIMAPError(data)
 
 #-----------------------------------------------------------------------
-def imapserver(fname=None):
+def imapserver(server,fname=None):
     """
     connect to the imap server specified in $HOME/.imap
-    imap file looks like this:
+    returns a standard IMAP4/IMAP4_SSL object.
 
-        $ cat ~/.mailcfg 
-        SSL=True
-        smtp='smtp.example.com'
-        imap='imap.example.com'
-        login='myname'
-        passwd='mypass'
+    the config file is in standard ini-style.  a section looks like this:
+        [gmail]
+        ssl=True
+        smtp=smtp.gmail.com
+        imap=imap.gmail.com
+        login=myname@gmail.com
+        passwd=mypasswd
     """
     if fname is None:
         fname = os.environ['HOME']+'/.imap'
@@ -49,13 +53,16 @@ def imapserver(fname=None):
     # imap file can't be readable by other people!
     s=os.stat(fname)
     if s.st_mode & 0077 != 0:
-        raise MailtoolsError('.imap file must not be readable by others')
+        raise MailtoolsError('%s must not be readable by others'%(fname))
 
+    cfg=ConfigParser.ConfigParser()
+    cfg.read(fname)
     x={}
-    execfile(fname,x)
-    # del x['__builtins__']; print x
+    for k,v in cfg.items(server):
+        x[k]=v
+    #import pprint; pprint.pprint(x)
 
-    if x['SSL']:
+    if x['ssl'] == 'True':
         m=imaplib.IMAP4_SSL(x['imap'])
     else:
         m=imaplib.IMAP4(x['imap'])
@@ -64,4 +71,4 @@ def imapserver(fname=None):
     return m
 
 if __name__ == "__main__":
-    m=imapserver()
+    m=imapserver('gmail')
