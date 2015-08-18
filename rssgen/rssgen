@@ -1,0 +1,22 @@
+#!/bin/sh
+# simplest rss generator, to get audiobooks into downcast
+# usage rssgen title files...
+
+title=$1
+url=$2
+shift
+
+echo '<?xml version="1.0" encoding="UTF-8"?>'
+echo '  <channel>'
+echo '    <title>'$title'</title>'
+
+shift
+for i in $*; do
+    echo '    <item>'
+    echo '      <title>'$i'</title>'
+    echo '      <enclosure type="audio/mpeg" url="'$url/$i'"/>'
+    echo '    </item>'
+done
+
+echo '  </channel>'
+echo '</rss>'

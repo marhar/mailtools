@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <channel>by-newyear-1.mp3
+                <title>CandyBaby</title>
+                <item>
+                        <title>candybaby-newyear-1.mp3</title>
+                        <enclosure type="audio/mpeg" url="http://markharrison.net/candybaby/candybaby-newyear-1.mp3" />
+                </item>
+                <item>
+                        <title>candybaby-newyear-2.mp3</title>
+                        <enclosure type="audio/mpeg" url="http://markharrison.net/candybaby/candybaby-newyear-2.mp3" />
+                </item>
+        </channel>
+</rss>
