@@ -11,7 +11,7 @@ echo '  <channel>'
 echo '    <title>'$title'</title>'
 
 shift
-for i in $*; do
+for i in "$@"; do
     echo '    <item>'
     echo '      <title>'$i'</title>'
     echo '      <enclosure type="audio/mpeg" url="'$url/$i'"/>'
