@@ -79,7 +79,7 @@ def main():
         server='gmail'
 
     m=mailcfg.imapserver(server)
-    rc,data=m.select('inbox')
+    rc,data=m.select('[Gmail]/rcgroups') # we filter to here on gmail
     mailcfg.ok(rc,data)
 
     rc,data=m.search(None, '(FROM "web@rcgroups.com")')
