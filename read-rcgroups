@@ -73,8 +73,14 @@ def main():
        distance, but to do what lies clearly at hand.
           --Thomas Carlyle
     """
-    if len(sys.argv) > 1:      # default to gmail
-        server=sys.argv[1]
+
+    if len(sys.argv) > 1:      # max tabs to open
+        N=int(sys.argv[1])
+    else:
+        N=50
+
+    if len(sys.argv) > 2:      # default to gmail
+        server=sys.argv[2]
     else:
         server='gmail'
 
@@ -86,7 +92,9 @@ def main():
     mailcfg.ok(rc,data)
 
     seen={}
+    i=0
     for msgno in data[0].split():
+        i+=1
         rc,data=m.fetch(msgno,'(RFC822)')
         mailcfg.ok(rc,data)
         body=email.message_from_string(data[0][1])
@@ -96,6 +104,10 @@ def main():
             print h
             if DOIT: open(h)
         if DOIT: m.store(msgno, '+FLAGS', '\Deleted')
+        if i >= N:
+            print '*** stopped after first',N
+            break
+  
 
     m.close()
     m.logout()
