@@ -93,6 +93,8 @@ def main():
 
     seen={}
     i=0
+    totmsgs=len(data[0].split())
+    print 'messages:',totmsgs
     for msgno in data[0].split():
         i+=1
         rc,data=m.fetch(msgno,'(RFC822)')
@@ -105,7 +107,7 @@ def main():
             if DOIT: open(h)
         if DOIT: m.store(msgno, '+FLAGS', '\Deleted')
         if i >= N:
-            print '*** stopped after first',N
+            print '*** stopped after first %d, %d left'%(N,totmsgs-N)
             break
   
 
