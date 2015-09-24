@@ -77,7 +77,7 @@ def main():
     if len(sys.argv) > 1:      # max tabs to open
         N=int(sys.argv[1])
     else:
-        N=50
+        N=25
 
     if len(sys.argv) > 2:      # default to gmail
         server=sys.argv[2]
