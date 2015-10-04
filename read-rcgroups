@@ -92,24 +92,29 @@ def main():
     mailcfg.ok(rc,data)
 
     seen={}
-    i=0
+    nshown=0
+    nskipped = 0
     totmsgs=len(data[0].split())
     print 'messages:',totmsgs
     for msgno in data[0].split():
-        i+=1
         rc,data=m.fetch(msgno,'(RFC822)')
         mailcfg.ok(rc,data)
         body=email.message_from_string(data[0][1])
         h=url(str(body))
         if seen.has_key(h) == False:
+            nshown += 1
             seen[h] = 1
             print h
             if DOIT: open(h)
+        else:
+            nskipped += 1
+            print '# (skip)', h
         if DOIT: m.store(msgno, '+FLAGS', '\Deleted')
-        if i >= N:
+        if nshown >= N:
             print '*** stopped after first %d, %d left'%(N,totmsgs-N)
             break
-  
+    print 'shown:   %3d' % nshown
+    print 'skipped: %3d' % nskipped
 
     m.close()
     m.logout()
