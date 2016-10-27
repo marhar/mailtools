@@ -25,12 +25,13 @@ def open(url):
        know what works!
     """
     os.system("open '%s'"%(url))
-    time.sleep(.25)  # this delay seems to makes opening smoother
+    #time.sleep(.25)  # this delay seems to makes opening smoother
 
 #-----------------------------------------------------------------------
 # handy re's for rcgroups email
 #-----------------------------------------------------------------------
 re_http=re.compile(r'^(http://.*)$')
+re_http=re.compile(r'^(https://www.rcgroups.com/.*)$')
 re_subj=re.compile(r'Subject: (.*)')
 re_thread=re.compile(r'^(You are subscribed to the thread.*)')
 re_forum=re.compile(r'^You are subscribed to the forum[^,]*, (.*)')
@@ -74,10 +75,10 @@ def main():
           --Thomas Carlyle
     """
 
-    if len(sys.argv) > 1:      # max tabs to open
+    if len(sys.argv) > 1:      # max messages to process (including dupes)
         N=int(sys.argv[1])
     else:
-        N=25
+        N=200
 
     if len(sys.argv) > 2:      # default to gmail
         server=sys.argv[2]
