@@ -97,7 +97,9 @@ def main():
     nskipped = 0
     totmsgs=len(data[0].split())
     print 'messages:',totmsgs
+    i = 0
     for msgno in data[0].split():
+        i += 1
         rc,data=m.fetch(msgno,'(RFC822)')
         mailcfg.ok(rc,data)
         body=email.message_from_string(data[0][1])
@@ -111,11 +113,12 @@ def main():
             nskipped += 1
             print '# (skip)', h
         if DOIT: m.store(msgno, '+FLAGS', '\Deleted')
+        print '# %2d%% %d/%d shown %d skipped %d' % \
+                 (int(float(i)/float(totmsgs)*100), i, 
+                         totmsgs, nshown, nskipped)
         if nshown >= N:
             print '*** stopped after first %d, %d left'%(N,totmsgs-N)
             break
-    print 'shown:   %3d' % nshown
-    print 'skipped: %3d' % nskipped
 
     m.close()
     m.logout()
