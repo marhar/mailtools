@@ -19,7 +19,7 @@ import sys,re,time,os,email
 import mailcfg
 
 #-----------------------------------------------------------------------
-def open(url):
+def doopen(url):
     """open this url in a browser
        currently works for mac.  if you're on another system let me
        know what works!
@@ -75,6 +75,9 @@ def main():
           --Thomas Carlyle
     """
 
+    logger = open("rcreader.log", "a")
+    logger.write("-----------\n")
+    logger.flush()
     if len(sys.argv) > 1:      # max messages to process (including dupes)
         N=int(sys.argv[1])
     else:
@@ -96,7 +99,8 @@ def main():
     nshown=0
     nskipped = 0
     totmsgs=len(data[0].split())
-    print 'messages:',totmsgs
+    #print 'messages:',totmsgs
+    statstr = ""
     i = 0
     for msgno in data[0].split():
         i += 1
@@ -107,25 +111,53 @@ def main():
         if seen.has_key(h) == False:
             nshown += 1
             seen[h] = 1
-            print h
-            if DOIT: open(h)
+            #print h
+            logger.write("open '" +h + "'\n")
+            logger.flush()
+            statstr += "."
+            if DOIT: doopen(h)
         else:
             nskipped += 1
-            print '# (skip)', h
+            #print '# (skip)', h
+            statstr += "o"
         if DOIT: m.store(msgno, '+FLAGS', '\Deleted')
-        print '# %2d%% %d/%d shown %d skipped %d' % \
-                 (int(float(i)/float(totmsgs)*100), i, 
-                         totmsgs, nshown, nskipped)
+
+        stats(i, totmsgs, nshown, nskipped)
+        percent(i, totmsgs, nshown, nskipped, statstr)
         if nshown >= N:
             print '*** stopped after first %d, %d left'%(N,totmsgs-N)
             break
 
+    sys.stdout.write("\n%3d opened %3d skipped\n" % (nshown, nskipped))
     m.close()
     m.logout()
 
+def ttt(s):
+    """write string to screen"""
+    sys.stdout.write(s)
+    sys.stdout.flush()
+
+def stats(i, totmsgs, nshown, nskipped):
+    return
+    ttt('# %2d%% %d/%d shown %d skipped %d' % \
+             (int(float(i)/float(totmsgs)*100), i, 
+                     totmsgs, nshown, nskipped))
+
+def percent(i, totmsgs, nshown, nskipped, statstr):
+    """print a simple percentage bar"""
+
+    ttt('\r%3d %3d (%3d skipped) %s\033[K' % (totmsgs-i, nshown, nskipped, statstr))
+    #ttt('\r%3d %s%s%s\033[K' % (totmsgs-i, 'x'*nshown,
+    #        'o'*nskipped, '.'*(totmsgs-nshown-nskipped)))
+    time.sleep(DELAY)
+
 #-----------------------------------------------------------------------
+DELAY=0  # make larger for debugging or for slow computer
 DOIT=True
 # DOIT=False  # uncomment for testing
+if (not DOIT):
+    print "DRY RUN MODE"
+
 try:
     main()
 except KeyboardInterrupt:
