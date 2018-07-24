@@ -75,6 +75,7 @@ def main():
           --Thomas Carlyle
     """
 
+    showstart()
     logger = open("rcreader.log", "a")
     logger.write("-----------\n")
     logger.flush()
@@ -116,19 +117,19 @@ def main():
             logger.flush()
             statstr += "."
             if DOIT: doopen(h)
+            show(i, totmsgs, nskipped, ".", runstate)
         else:
+            show(i, totmsgs, nskipped, "o", runstate)
             nskipped += 1
             #print '# (skip)', h
             statstr += "o"
         if DOIT: m.store(msgno, '+FLAGS', '\Deleted')
 
-        stats(i, totmsgs, nshown, nskipped)
-        percent(i, totmsgs, nshown, nskipped, statstr)
         if nshown >= N:
             print '*** stopped after first %d, %d left'%(N,totmsgs-N)
             break
 
-    sys.stdout.write("\n%3d opened %3d skipped\n" % (nshown, nskipped))
+    sys.stdout.write("\n%d opened %d skipped\n" % (nshown, nskipped))
     m.close()
     m.logout()
 
@@ -137,26 +138,27 @@ def ttt(s):
     sys.stdout.write(s)
     sys.stdout.flush()
 
-def stats(i, totmsgs, nshown, nskipped):
-    return
-    ttt('# %2d%% %d/%d shown %d skipped %d' % \
-             (int(float(i)/float(totmsgs)*100), i, 
-                     totmsgs, nshown, nskipped))
+def showstart():
+    ttt("\033[2J\033[H")
 
-def percent(i, totmsgs, nshown, nskipped, statstr):
-    """print a simple percentage bar"""
-
-    ttt('\r%3d %3d (%3d skipped) %s\033[K' % (totmsgs-i, nshown, nskipped, statstr))
-    #ttt('\r%3d %s%s%s\033[K' % (totmsgs-i, 'x'*nshown,
-    #        'o'*nskipped, '.'*(totmsgs-nshown-nskipped)))
+def show(i, totmsgs, nskipped, ch, extra):
+    WIDTH = 10
+    ttt("\033[H%d %d %d %s"%(totmsgs, i, nskipped, extra))
+    cc = (i - 1) // WIDTH
+    rr = (i - 1) % WIDTH
+    rr += 1
+    cc += 2
+    ttt("\033[%d;%dH%s"%(cc,rr,ch))
     time.sleep(DELAY)
 
 #-----------------------------------------------------------------------
 DELAY=0  # make larger for debugging or for slow computer
 DOIT=True
-# DOIT=False  # uncomment for testing
+#DOIT=False  # uncomment for testing
 if (not DOIT):
-    print "DRY RUN MODE"
+    runstate = "DRY RUN MODE"
+else:
+    runstate = ""
 
 try:
     main()
