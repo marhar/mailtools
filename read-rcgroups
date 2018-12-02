@@ -8,6 +8,10 @@ telling you what's new to be read.  this program grabs those messages,
 opens the threads in your browser, and deletes the messages.  Don't
 be alarmed if it opens a lot of tabs.
 
+If you use gmail, add this filter:
+    Matches: from:(rcgroups.com@vsobr.com)
+    Do this: Skip Inbox, Apply label "[Gmail]/rcgroups"
+
 usage: read-rcgroups [mailserver]
 
 This is part of the mailtools package : (c) 2015 Mark Harrison
