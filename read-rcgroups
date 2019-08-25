@@ -19,7 +19,7 @@ https://github.com/marhar/mailtools   :     Share and Enjoy!
 """
 
 #-----------------------------------------------------------------------
-import sys,re,time,os,email
+import sys,time,os,email
 import mailcfg
 
 #-----------------------------------------------------------------------
@@ -30,15 +30,6 @@ def doopen(url):
     """
     os.system("open '%s'"%(url))
     #time.sleep(.25)  # this delay seems to makes opening smoother
-
-#-----------------------------------------------------------------------
-# handy re's for rcgroups email
-#-----------------------------------------------------------------------
-re_http=re.compile(r'^(http://.*)$')
-re_http=re.compile(r'^(https://www.rcgroups.com/.*)$')
-re_subj=re.compile(r'Subject: (.*)')
-re_thread=re.compile(r'^(You are subscribed to the thread.*)')
-re_forum=re.compile(r'^You are subscribed to the forum[^,]*, (.*)')
 
 #-----------------------------------------------------------------------
 def contains(re,s):
@@ -53,25 +44,16 @@ def contains(re,s):
 #-----------------------------------------------------------------------
 def url(s):
     """look for the strings that indicate unread forums or threads.
-
-       this is a bunch of hacky stuff that looks in the email body
-       and tries to figure out what's not read.  Hope rcgroups never
-       changes the body format!  Even better that they include a
-       nice json summary.
+       rcgroups keeps changing the message format, so we adjust whenever
+       we notice things not working.
     """
-
-    http=None
-    for x in s.split('\n'):
-        x=x.replace('\r','')
-        mm=re_http.search(x)
-        if mm:
-            http=mm.group(1)
-            http=http.replace(' ','')
-            http+='&goto=newpost'
-            break   # must break, or you will pick up the unsubscribe link
-
-    return http
-
+    msg = email.message_from_string(s)
+    for part in msg.walk():
+        if part.get_content_type() == 'text/plain':
+            for line in part.get_payload(decode=True).split('\n'):
+                if line.startswith('http://url5878.vsobr.com') or \
+                   line.startswith('https://www.rcgroups.com'):
+                    return line
 #-----------------------------------------------------------------------
 def main():
     """Our main business is not to see what lies dimly at a
@@ -103,9 +85,9 @@ def main():
     seen={}
     nshown=0
     nskipped = 0
+    nerrored = 0
     totmsgs=len(data[0].split())
     #print 'messages:',totmsgs
-    statstr = ""
     i = 0
     for msgno in data[0].split():
         i += 1
@@ -113,20 +95,20 @@ def main():
         mailcfg.ok(rc,data)
         body=email.message_from_string(data[0][1])
         h=url(str(body))
-        if seen.has_key(h) == False:
+        if h is None:
+            nerrored += 1
+            show(i, totmsgs, nskipped, "E", runstate)
+        elif seen.has_key(h) == False:
             nshown += 1
             seen[h] = 1
-            #print h
             logger.write("open '" +h + "'\n")
             logger.flush()
-            statstr += "."
             if DOIT: doopen(h)
             show(i, totmsgs, nskipped, ".", runstate)
         else:
             show(i, totmsgs, nskipped, "o", runstate)
             nskipped += 1
             #print '# (skip)', h
-            statstr += "o"
         if DOIT: m.store(msgno, '+FLAGS', '\Deleted')
 
         if nshown >= N:
@@ -134,6 +116,7 @@ def main():
             break
 
     sys.stdout.write("\n%d opened %d skipped\n" % (nshown, nskipped))
+    sys.stdout.write("\n%d errored\n" % (nerrored))
     m.close()
     m.logout()
 
