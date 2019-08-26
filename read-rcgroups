@@ -20,6 +20,7 @@ https://github.com/marhar/mailtools   :     Share and Enjoy!
 
 #-----------------------------------------------------------------------
 import sys,time,os,email
+from subprocess import Popen, PIPE
 import mailcfg
 
 #-----------------------------------------------------------------------
@@ -51,8 +52,19 @@ def url(s):
     for part in msg.walk():
         if part.get_content_type() == 'text/plain':
             for line in part.get_payload(decode=True).split('\n'):
-                if line.startswith('http://url5878.vsobr.com') or \
-                   line.startswith('https://www.rcgroups.com'):
+                line=line.strip()
+                if line.startswith('http://url5878.vsobr.com'):
+                    # figure out how to grab this without using libcurl
+                    process = Popen(['curl', '-I', line], stdout=PIPE, stderr=PIPE)
+                    stdout, stderr = process.communicate()
+                    for cline in stdout.split('\n'):
+                        cline=cline.strip()
+                        fields=cline.split()
+                        if len(fields) >= 2 and fields[0]=='Location:':
+                            rv=fields[1]+'&goto=newpost'
+                            return rv
+                    return None
+                if line.startswith('https://www.rcgroups.com'):
                     return line
 #-----------------------------------------------------------------------
 def main():
@@ -129,6 +141,8 @@ def showstart():
     ttt("\033[2J\033[H")
 
 def show(i, totmsgs, nskipped, ch, extra):
+    if not DOIT:
+        return
     WIDTH = 10
     ttt("\033[H%d %d %d %s"%(totmsgs, i, nskipped, extra))
     cc = (i - 1) // WIDTH
