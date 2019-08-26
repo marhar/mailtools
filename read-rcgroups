@@ -54,7 +54,13 @@ def url(s):
             for line in part.get_payload(decode=True).split('\n'):
                 line=line.strip()
                 if line.startswith('http://url5878.vsobr.com'):
-                    # figure out how to grab this without using libcurl
+                    # urllib2 dies with HTTP Error 403: Forbidden
+                    # so for now call out to curl
+                    #     import urllib2
+                    #     response = urllib2.urlopen(url)
+                    #     for line in response.info().headers:
+                    #         print line.strip()
+
                     process = Popen(['curl', '-I', line], stdout=PIPE, stderr=PIPE)
                     stdout, stderr = process.communicate()
                     for cline in stdout.split('\n'):
