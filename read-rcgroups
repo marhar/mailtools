@@ -54,21 +54,19 @@ def url(s):
             for line in part.get_payload(decode=True).split('\n'):
                 line=line.strip()
                 if line.startswith('http://url5878.vsobr.com'):
-                    # urllib2 dies with HTTP Error 403: Forbidden
-                    # so for now call out to curl
-                    #     import urllib2
-                    #     response = urllib2.urlopen(url)
-                    #     for line in response.info().headers:
-                    #         print line.strip()
-
-                    process = Popen(['curl', '-I', line], stdout=PIPE, stderr=PIPE)
-                    stdout, stderr = process.communicate()
-                    for cline in stdout.split('\n'):
-                        cline=cline.strip()
-                        fields=cline.split()
-                        if len(fields) >= 2 and fields[0]=='Location:':
-                            rv=fields[1]+'&goto=newpost'
-                            return rv
+                    import urllib2
+                    class NoRedirection(urllib2.HTTPErrorProcessor):
+                        def http_response(self, request, response):
+                            return response
+                        https_response = http_response
+                    opener = urllib2.build_opener(NoRedirection)
+                    urllib2.install_opener(opener)
+                    req=urllib2.Request(line)
+                    response = urllib2.urlopen(req)
+                    for cline in response.info().headers:
+                        x = cline.split()
+                        if x[0] == 'Location:':
+                            return x[1]+'&goto=newpost'
                     return None
                 if line.startswith('https://www.rcgroups.com'):
                     return line
@@ -134,7 +132,7 @@ def main():
             break
 
     sys.stdout.write("\n%d opened %d skipped\n" % (nshown, nskipped))
-    sys.stdout.write("\n%d errored\n" % (nerrored))
+    sys.stdout.write("%d errored\n" % (nerrored))
     m.close()
     m.logout()
 
@@ -150,7 +148,7 @@ def show(i, totmsgs, nskipped, ch, extra):
     if not DOIT:
         return
     WIDTH = 10
-    ttt("\033[H%d %d %d %s"%(totmsgs, i, nskipped, extra))
+    ttt("\033[Htotmsgs=%d i=%d skipped=%d %s"%(totmsgs, i, nskipped, extra))
     cc = (i - 1) // WIDTH
     rr = (i - 1) % WIDTH
     rr += 1
