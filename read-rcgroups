@@ -14,13 +14,12 @@ If you use gmail, add this filter:
 
 usage: read-rcgroups [mailserver]
 
-This is part of the mailtools package : (c) 2015 Mark Harrison
+This is part of the mailtools package : (c) 2015-2019 Mark Harrison
 https://github.com/marhar/mailtools   :     Share and Enjoy!
 """
 
 #-----------------------------------------------------------------------
-import sys,time,os,email
-from subprocess import Popen, PIPE
+import sys,time,os,email, urllib2
 import mailcfg
 
 #-----------------------------------------------------------------------
@@ -33,28 +32,17 @@ def doopen(url):
     #time.sleep(.25)  # this delay seems to makes opening smoother
 
 #-----------------------------------------------------------------------
-def contains(re,s):
-    """does s contain this re?"""
-    mm=re.search(x)
-    if mm:
-        res=mm.group(1)
-    else:
-        res=None
-    return res
-
-#-----------------------------------------------------------------------
-def url(s):
+def url(email_text):
     """look for the strings that indicate unread forums or threads.
        rcgroups keeps changing the message format, so we adjust whenever
        we notice things not working.
     """
-    msg = email.message_from_string(s)
+    msg = email.message_from_string(email_text)
     for part in msg.walk():
         if part.get_content_type() == 'text/plain':
             for line in part.get_payload(decode=True).split('\n'):
                 line=line.strip()
                 if line.startswith('http://url5878.vsobr.com'):
-                    import urllib2
                     class NoRedirection(urllib2.HTTPErrorProcessor):
                         def http_response(self, request, response):
                             return response
@@ -69,7 +57,7 @@ def url(s):
                             return x[1]+'&goto=newpost'
                     return None
                 if line.startswith('https://www.rcgroups.com'):
-                    return line
+                    return line+'&goto=newpost'
 #-----------------------------------------------------------------------
 def main():
     """Our main business is not to see what lies dimly at a
