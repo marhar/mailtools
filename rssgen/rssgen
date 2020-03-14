@@ -7,15 +7,30 @@ url=$2
 shift
 
 echo '<?xml version="1.0" encoding="UTF-8"?>'
+echo '<rss version="2.0">'
 echo '  <channel>'
 echo '    <title>'$title'</title>'
+echo '    <description>'$title'</description>'
 
 shift
 for i in "$@"; do
-    echo '    <item>'
-    echo '      <title>'$i'</title>'
-    echo '      <enclosure type="audio/mpeg" url="'$url/$i'"/>'
-    echo '    </item>'
+    TITLE=$i
+    DESC=$i
+    PUBDATE=`date`
+    PUBDATE='Tue, 19 Oct 2004 13:38:55 -0400'
+    UUID=`uuidgen`
+    LENGTH=`ls -l $i |awk '{print $5}'`
+    echo '<item>'
+    echo '  <title>'$TITLE'</title>'
+    echo '  <description>'$DESC'</description>'
+    echo '  <pubDate>'$PUBDATE'</pubDate>'
+    echo '  <guid isPermaLink="false">'$UUID'</guid>'
+    echo '  <enclosure url="'$url/$i'" length="'$LENGTH'" type="audio/mpeg" />'
+    echo '</item>'
+    #echo '    <item>'
+    #echo '      <title>'$i'</title>'
+    #echo '      <enclosure type="audio/mpeg" url="'$url/$i'"/>'
+    #echo '    </item>'
 done
 
 echo '  </channel>'
