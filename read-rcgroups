@@ -45,7 +45,7 @@ def url(email_text):
                 if line.startswith('http://url5878.vsobr.com'):
                     class NoRedirection(urllib2.HTTPErrorProcessor):
                         def http_response(self, request, response):
-                            return response
+                            return ',',response
                         https_response = http_response
                     opener = urllib2.build_opener(NoRedirection)
                     urllib2.install_opener(opener)
@@ -54,10 +54,10 @@ def url(email_text):
                     for cline in response.info().headers:
                         x = cline.split()
                         if x[0] == 'Location:':
-                            return x[1]+'&goto=newpost'
+                            return '.',x[1]+'&goto=newpost'
                     return None
                 if line.startswith('https://www.rcgroups.com'):
-                    return line+'&goto=newpost'
+                    return '.',line+'&goto=newpost'
 #-----------------------------------------------------------------------
 def main():
     """Our main business is not to see what lies dimly at a
@@ -98,7 +98,7 @@ def main():
         rc,data=m.fetch(msgno,'(RFC822)')
         mailcfg.ok(rc,data)
         body=email.message_from_string(data[0][1])
-        h=url(str(body))
+        signal,h=url(str(body))
         if h is None:
             nerrored += 1
             show(i, totmsgs, nskipped, "E", runstate)
@@ -108,7 +108,7 @@ def main():
             logger.write("open '" +h + "'\n")
             logger.flush()
             if DOIT: doopen(h)
-            show(i, totmsgs, nskipped, ".", runstate)
+            show(i, totmsgs, nskipped, signal, runstate)
         else:
             show(i, totmsgs, nskipped, "o", runstate)
             nskipped += 1
