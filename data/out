@@ -1,0 +1,746 @@
+dtrace: system integrity protection is on, some features will not be available
+SYSCALL(args) 		 = return
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 302 Found
+Server: nginx
+Date: Mon, 26 Aug 2019 05:53:35 GMT
+Content-Type: text/html; charset=utf-8
+Connection: keep-alive
+Location: https://www.rcgroups.com/forums/showthread.php?t=2464844
+X-Robots-Tag: noindex, nofollow
+
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2175 (ID 945: syscall::read_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2198 (ID 557: syscall::sysctl:return): invalid kernel access in action #10 at DIF offset 28
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2198 (ID 557: syscall::sysctl:return): invalid kernel access in action #10 at DIF offset 28
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+open("/dev/dtracehelper\0", 0x2, 0xFFFFFFFFEA0DBE10)		 = 3 0
+ioctl(0x3, 0x80086804, 0x7FFEEA0DBC20)		 = 0 0
+close(0x3)		 = 0 0
+madvise(0x105E2B000, 0x2000, 0x5)		 = 0 0
+access("/AppleInternal/XBS/.isChrooted\0", 0x0, 0x0)		 = -1 Err#2
+bsdthread_register(0x7FFF7ED55400, 0x7FFF7ED553F0, 0x2000)		 = 1073742047 0
+sysctlbyname(kern.bootargs, 0xD, 0x7FFEEA0DAEB0, 0x7FFEEA0DAEA0, 0x0)		 = 0 0
+issetugid(0x0, 0x0, 0x0)		 = 0 0
+ioctl(0x2, 0x4004667A, 0x7FFEEA0DA5F4)		 = -1 Err#25
+ioctl(0x2, 0x40487413, 0x7FFEEA0DA5F8)		 = -1 Err#25
+mprotect(0x105E7B000, 0x1000, 0x0)		 = 0 0
+mprotect(0x105E82000, 0x1000, 0x0)		 = 0 0
+mprotect(0x105E83000, 0x1000, 0x0)		 = 0 0
+mprotect(0x105E8A000, 0x1000, 0x0)		 = 0 0
+mprotect(0x105BEE000, 0x90, 0x1)		 = 0 0
+mprotect(0x105BF0000, 0x1000, 0x1)		 = 0 0
+mprotect(0x105BEE000, 0x90, 0x3)		 = 0 0
+mprotect(0x105BEE000, 0x90, 0x1)		 = 0 0
+getpid(0x0, 0x0, 0x0)		 = 9708 0
+stat64("/AppleInternal\0", 0x7FFEEA0DB320, 0x0)		 = -1 Err#2
+csops(0x25EC, 0x7, 0x7FFEEA0DAE50)		 = -1 Err#22
+proc_info(0x2, 0x25EC, 0xD)		 = 64 0
+csops(0x25EC, 0x7, 0x7FFEEA0DA690)		 = -1 Err#22
+pipe(0x0, 0x0, 0x0)		 = 3 0
+close(0x3)		 = 0 0
+close(0x4)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC758, 0x7FFEEA0DC780)		 = 0 0
+getrlimit(0x1008, 0x7FFEEA0DC590, 0x0)		 = 0 0
+open_nocancel("/Users/marhar/anaconda2/ssl/openssl.cnf\0", 0x0, 0x1B6)		 = 3 0
+fstat64(0x3, 0x7FFEEA0DC458, 0x0)		 = 0 0
+close_nocancel(0x3)		 = 0 0
+socket(0x1E, 0x2, 0x0)		 = 3 0
+close(0x3)		 = 0 0
+open_nocancel("/usr/share/locale/en_US.UTF-8/LC_COLLATE\0", 0x0, 0x7)		 = 3 0
+fcntl_nocancel(0x3, 0x3, 0x0)		 = 0 0
+fstat64(0x3, 0x7FFEEA0DC068, 0x0)		 = 0 0
+close_nocancel(0x3)		 = 0 0
+open_nocancel("/usr/share/locale/en_US.UTF-8/LC_CTYPE\0", 0x0, 0x5)		 = 3 0
+fcntl_nocancel(0x3, 0x3, 0x0)		 = 0 0
+fstat64(0x3, 0x7FFEEA0DC1A8, 0x0)		 = 0 0
+fstat64(0x3, 0x7FFEEA0DBFA8, 0x0)		 = 0 0
+lseek(0x3, 0x0, 0x1)		 = 0 0
+lseek(0x3, 0x0, 0x0)		 = 0 0
+close_nocancel(0x3)		 = 0 0
+open_nocancel("/usr/share/locale/en_US.UTF-8/LC_MONETARY\0", 0x0, 0x8)		 = 3 0
+fstat64(0x3, 0x7FFEEA0DC1B0, 0x0)		 = 0 0
+close_nocancel(0x3)		 = 0 0
+open_nocancel("/usr/share/locale/en_US.UTF-8/LC_NUMERIC\0", 0x0, 0x7)		 = 3 0
+fstat64(0x3, 0x7FFEEA0DC1B0, 0x0)		 = 0 0
+close_nocancel(0x3)		 = 0 0
+open_nocancel("/usr/share/locale/en_US.UTF-8/LC_TIME\0", 0x0, 0x4)		 = 3 0
+fstat64(0x3, 0x7FFEEA0DC1B0, 0x0)		 = 0 0
+close_nocancel(0x3)		 = 0 0
+open_nocancel("/usr/share/locale/en_US.UTF-8/LC_MESSAGES/LC_MESSAGES\0", 0x0, 0xFFFFFFFFFFFFFFF4)		 = 3 0
+fstat64(0x3, 0x7FFEEA0DC1B0, 0x0)		 = 0 0
+close_nocancel(0x3)		 = 0 0
+open_nocancel("/Users/marhar/.curlrc\0", 0x0, 0x1B6)		 = -1 Err#2
+ioctl(0x1, 0x4004667A, 0x7FFEEA0DC374)		 = -1 Err#25
+ioctl(0x1, 0x40487413, 0x7FFEEA0DC378)		 = -1 Err#25
+ioctl(0x0, 0x40087468, 0x7FFEEA0DC398)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC360)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC308, 0x0)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC2C0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC158, 0x7FFEEA0DC180)		 = 0 0
+bsdthread_create(0x105B94B10, 0x7FC280D1BEE0, 0x700002491000)		 = 38342656 0
+thread_selfid(0x0, 0x0, 0x0)		 = 21446869 0
+shm_open(0x7FFF7ED48CD8, 0x0, 0x0)		 = 3 0
+mmap(0x0, 0x1000, 0x1, 0x1, 0x3, 0x0)		 = 0x105C6D000 0
+close_nocancel(0x3)		 = 0 0
+open_nocancel("/etc/.mdns_debug\0", 0x0, 0x0)		 = -1 Err#2
+kqueue(0x0, 0x0, 0x0)		 = 3 0
+kevent(0x3, 0x700002490868, 0x1)		 = 0 0
+socket(0x1, 0x1, 0x0)		 = 4 0
+setsockopt(0x4, 0xFFFF, 0x1022)		 = 0 0
+setsockopt(0x4, 0xFFFF, 0x1100)		 = 0 0
+connect_nocancel(0x4, 0x700002490450, 0x6A)		 = 0 0
+sendto_nocancel(0x4, 0x7FC280F00430, 0x1C)		 = 28 0
+select_nocancel(0x5, 0x700002490440, 0x0)		 = 1 0
+recvfrom_nocancel(0x4, 0x700002490410, 0x4)		 = 4 0
+socketpair(0x1, 0x1, 0x0)		 = 0 0
+setsockopt(0x5, 0xFFFF, 0x1100)		 = 0 0
+sendto_nocancel(0x4, 0x7FC280C026D0, 0x3A)		 = 58 0
+sendmsg_nocancel(0x4, 0x700002490360, 0x0)		 = 1 0
+close_nocancel(0x6)		 = 0 0
+select_nocancel(0x6, 0x700002490360, 0x0)		 = 1 0
+recvfrom_nocancel(0x5, 0x700002490330, 0x4)		 = 4 0
+close_nocancel(0x5)		 = 0 0
+socketpair(0x1, 0x1, 0x0)		 = 0 0
+setsockopt(0x5, 0xFFFF, 0x1100)		dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2198 (ID 557: syscall::sysctl:return): invalid kernel access in action #10 at DIF offset 28
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+ = 0 0
+sendto_nocancel(0x4, 0x7FC280C026D0, 0x3A)		 = 58 0
+sendmsg_nocancel(0x4, 0x700002490360, 0x0)		 = 1 0
+close_nocancel(0x6)		 = 0 0
+select_nocancel(0x6, 0x700002490360, 0x0)		 = 1 0
+recvfrom_nocancel(0x5, 0x700002490330, 0x4)		 = 4 0
+close_nocancel(0x5)		 = 0 0
+kevent(0x3, 0x700002490868, 0x1)		 = 0 0
+kevent(0x3, 0x0, 0x0)		 = 1 0
+kevent(0x3, 0x0, 0x0)		 = 1 0
+recvfrom_nocancel(0x4, 0x7000024904D0, 0x1C)		 = 28 0
+recvfrom_nocancel(0x4, 0x7FC280C026D0, 0x37)		 = 55 0
+select_nocancel(0x5, 0x700002490440, 0x0)		 = 1 0
+kevent(0x3, 0x70000248FEB0, 0x1)		 = 0 0
+recvfrom_nocancel(0x4, 0x7000024904D0, 0x1C)		 = 28 0
+recvfrom_nocancel(0x4, 0x7FC280C02730, 0x28)		 = 40 0
+select_nocancel(0x5, 0x700002490440, 0x0)		 = 1 0
+kevent(0x3, 0x70000248FEB0, 0x1)		 = 0 0
+recvfrom_nocancel(0x4, 0x7000024904D0, 0x1C)		 = 28 0
+recvfrom_nocancel(0x4, 0x7FC280C02730, 0x28)		 = 40 0
+select_nocancel(0x5, 0x700002490440, 0x0)		 = 1 0
+kevent(0x3, 0x70000248FEB0, 0x1)		 = 0 0
+recvfrom_nocancel(0x4, 0x7000024904D0, 0x1C)		 = 28 0
+recvfrom_nocancel(0x4, 0x7FC280C027D0, 0x37)		 = 55 0
+select_nocancel(0x5, 0x700002490440, 0x0)		 = 1 0
+kevent(0x3, 0x70000248FEB0, 0x1)		 = 0 0
+recvfrom_nocancel(0x4, 0x7000024904D0, 0x1C)		 = 28 0
+recvfrom_nocancel(0x4, 0x7FC280C02730, 0x24)		 = 36 0
+select_nocancel(0x5, 0x700002490440, 0x0)		 = 0 0
+kevent(0x3, 0x70000248FEB0, 0x1)		 = 0 0
+sendto_nocancel(0x4, 0x7FC280C027D0, 0x1C)		 = 28 0
+sendto_nocancel(0x4, 0x7FC280C02730, 0x1C)		 = 28 0
+close_nocancel(0x3)		 = 0 0
+proc_info(0x2, 0x25EC, 0x11)		 = 56 0
+proc_info(0x2, 0x25EC, 0x11)		 = 56 0
+issetugid(0x0, 0x0, 0x0)		 = 0 0
+openat(0xFFFFFFFFFFFFFFFE, "/Library/Preferences/Logging/com.apple.diagnosticd.filter.plist\0", 0x1000104, 0x2490298)		 = -1 Err#2
+open("/Users/marhar/anaconda2/bin/curl\0", 0x8004, 0x7ED922D6)		 = 3 0
+fcntl(0x3, 0x32, 0x70000248FD00)		 = 0 0
+close(0x3)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC2C0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+openat(0xFFFFFFFFFFFFFFFE, "/Library/Preferences/Logging/com.apple.diagnosticd.filter.plist\0", 0x1000104, 0x24902D8)		 = -1 Err#2
+getattrlist("/Users\0", 0x106542028, 0x70000248FAB0)		 = 0 0
+getattrlist("/Users/marhar\0", 0x106542028, 0x70000248FAB0)		 = 0 0
+getattrlist("/Users/marhar/anaconda2\0", 0x106542028, 0x70000248FAB0)		 = 0 0
+getattrlist("/Users/marhar/anaconda2/bin\0", 0x106542028, 0x70000248FAB0)		 = 0 0
+getattrlist("/Users/marhar/anaconda2/bin/curl\0", 0x106542028, 0x70000248FAB0)		 = 0 0
+stat64("/usr/lib/libnetwork.dylib\0", 0x70000248F8F0, 0x0)		 = 0 0
+stat64("/usr/lib/libpcap.A.dylib\0", 0x70000248F540, 0x0)		 = 0 0
+stat64("/usr/lib/libcoretls.dylib\0", 0x70000248F540, 0x0)		 = 0 0
+stat64("/usr/lib/libcoretls_cfhelpers.dylib\0", 0x70000248F540, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation\0", 0x70000248F540, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Security.framework/Versions/A/Security\0", 0x70000248F540, 0x0)		 = 0 0
+stat64("/usr/lib/libapple_nghttp2.dylib\0", 0x70000248F540, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/usr/lib/libDiagnosticMessagesClient.dylib\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/usr/lib/libOpenScriptingUtil.dylib\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/usr/lib/libauto.dylib\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/usr/lib/libbsm.0.dylib\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/usr/lib/libpam.2.dylib\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/usr/lib/libsqlite3.dylib\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/usr/lib/libxar.1.dylib\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/usr/lib/libz.1.dylib\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit\0", 0x70000248F1E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration\0", 0x70000248EFB0, 0x0)		 = 0 0
+stat64("/usr/lib/libarchive.2.dylib\0", 0x70000248EFB0, 0x0)		 = 0 0
+stat64("/usr/lib/libicucore.A.dylib\0", 0x70000248EFB0, 0x0)		 = 0 0
+stat64("/usr/lib/libxml2.2.dylib\0", 0x70000248EFB0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork\0", 0x70000248EFB0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration\0", 0x70000248EFB0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices\0", 0x70000248EFB0, 0x0)		 = 0 0
+stat64("/usr/lib/liblangid.dylib\0", 0x70000248EFB0, 0x0)		 = 0 0
+stat64("/usr/lib/libCRFSuite.dylib\0", 0x70000248EFB0, 0x0)		 = 0 0
+stat64("/usr/lib/libenergytrace.dylib\0", 0x70000248ED30, 0x0)		 = 0 0
+stat64("/usr/lib/system/libkxld.dylib\0", 0x70000248ED30, 0x0)		 = 0 0
+stat64("/usr/lib/libbz2.1.0.dylib\0", 0x70000248EE80, 0x0)		 = 0 0
+stat64("/usr/lib/liblzma.5.dylib\0", 0x70000248EE80, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents\0", 0x70000248EDE0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore\0", 0x70000248EDE0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata\0", 0x70000248EDE0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices\0", 0x70000248EDE0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit\0", 0x70000248EDE0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE\0", 0x70000248EDE0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices\0", 0x70000248EDE0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices\0", 0x70000248EDE0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList\0", 0x70000248EDE0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/NetFS.framework/Versions/A/NetFS\0", 0x70000248EC40, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth\0", 0x70000248EAD0, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport\0", 0x70000248E9D0, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC\0", 0x70000248EC10, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP\0", 0x70000248EC10, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities\0", 0x70000248EC10, 0x0)		 = 0 0
+stat64("/usr/lib/libmecabra.dylib\0", 0x70000248EC10, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices\0", 0x70000248EAD0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSyncLegacy.framework/Versions/A/ColorSyncLegacy\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight\0", 0x70000248E710, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface\0", 0x70000248E710, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate\0", 0x70000248E710, 0x0)		 = 0 0
+stat64("/usr/lib/libcompression.dylib\0", 0x70000248E460, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay\0", 0x70000248E460, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Metal.framework/Versions/A/Metal\0", 0x70000248E460, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders\0", 0x70000248E460, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport\0", 0x70000248E460, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore\0", 0x70000248E460, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage\0", 0x70000248E360, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib\0", 0x70000248E360, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib\0", 0x70000248E1C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib\0", 0x70000248E1C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib\0", 0x70000248E1C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib\0", 0x70000248E1C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib\0", 0x70000248E1C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib\0", 0x70000248E1C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libQuadrature.dylib\0", 0x70000248E1C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib\0", 0x70000248E1C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib\0", 0x70000248E1C0, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler\0", 0x70000248E210, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator\0", 0x70000248E210, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment\0", 0x70000248E210, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay\0", 0x70000248E210, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib\0", 0x70000248E070, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSCore.framework/Versions/A/MPSCore\0", 0x70000248E2A0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSImage.framework/Versions/A/MPSImage\0", 0x70000248E2A0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork\0", 0x70000248E2A0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix\0", 0x70000248E2A0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector\0", 0x70000248E2A0, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools\0", 0x70000248E110, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary\0", 0x70000248E110, 0x0)		 = 0 0
+stat64("/usr/lib/libMobileGestalt.dylib\0", 0x70000248DFB0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage\0", 0x70000248E210, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo\0", 0x70000248E210, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL\0", 0x70000248E210, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer\0", 0x70000248DF80, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/FaceCore.framework/Versions/A/FaceCore\0", 0x70000248DF80, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL\0", 0x70000248DF80, 0x0)		 = 0 0
+stat64("/usr/lib/libFosl_dynamic.dylib\0", 0x70000248DF80, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG\0", 0x70000248DD80, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontParser.dylib\0", 0x70000248DD80, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib\0", 0x70000248DD80, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib\0", 0x70000248D960, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib\0", 0x70000248D960, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib\0", 0x70000248D960, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib\0", 0x70000248D960, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib\0", 0x70000248D960, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib\0", 0x70000248D960, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG\0", 0x70000248D960, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib\0", 0x70000248DC50, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib\0", 0x70000248DA50, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib\0", 0x70000248DA50, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib\0", 0x70000248D8C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib\0", 0x70000248D7C0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib\0", 0x70000248D6B0, 0x0)		 = 0 0
+stat64("/usr/lib/libcups.2.dylib\0", 0x70000248E690, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos\0", 0x7000dtrace: error on enabled probe ID 2198 (ID 557: syscall::sysctl:return): invalid kernel access in action #10 at DIF offset 28
+0248E500, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/GSS.framework/Versions/A/GSS\0", 0x70000248E500, 0x0)		 = 0 0
+stat64("/usr/lib/libresolv.9.dylib\0", 0x70000248E500, 0x0)		 = 0 0
+stat64("/usr/lib/libiconv.2.dylib\0", 0x70000248E500, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal\0", 0x70000248E3F0, 0x0)		 = 0 0
+stat64("/usr/lib/libheimdal-asn1.dylib\0", 0x70000248E220, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory\0", 0x70000248E370, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth\0", 0x70000248E370, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory\0", 0x70000248E200, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation\0", 0x70000248E200, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS\0", 0x70000248E0C0, 0x0)		 = 0 0
+stat64("/usr/lib/libutil.dylib\0", 0x70000248DFB0, 0x0)		 = 0 0
+stat64("/usr/lib/libcharset.1.dylib\0", 0x70000248E420, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio\0", 0x70000248E770, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox\0", 0x70000248E770, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce\0", 0x70000248E600, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices\0", 0x70000248E600, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard\0", 0x70000248E4D0, 0x0)		 = 0 0
+stat64("/usr/lib/libmecab.1.0.0.dylib\0", 0x70000248EA70, 0x0)		 = 0 0
+stat64("/usr/lib/libgermantok.dylib\0", 0x70000248EA70, 0x0)		 = 0 0
+stat64("/usr/lib/libThaiTokenizer.dylib\0", 0x70000248EA70, 0x0)		 = 0 0
+stat64("/usr/lib/libChineseTokenizer.dylib\0", 0x70000248EA70, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/LanguageModeling.framework/Versions/A/LanguageModeling\0", 0x70000248E930, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/CoreEmoji.framework/Versions/A/CoreEmoji\0", 0x70000248E760, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon\0", 0x70000248E760, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData\0", 0x70000248E760, 0x0)		 = 0 0
+stat64("/usr/lib/libcmph.dylib\0", 0x70000248E760, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/CoreData.framework/Versions/A/CoreData\0", 0x70000248E9E0, 0x0)		 = 0 0
+stat64("/System/Library/Frameworks/ServiceManagement.framework/Versions/A/ServiceManagement\0", 0x70000248EA40, 0x0)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement\0", 0x70000248E8E0, 0x0)		 = 0 0
+stat64("/usr/lib/libxslt.1.dylib\0", 0x70000248EBE0, 0x0)		 = 0 0
+select(0x0, 0x0, 0x0, 0x0, 0x7FFEEA0DC2E8)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC2C0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+select(0x0, 0x0, 0x0, 0x0, 0x7FFEEA0DC2E8)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC2C0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+open("/dev/dtracehelper\0", 0x2, 0x2490370)		 = 3 0
+select(0x0, 0x0, 0x0, 0x0, 0x7FFEEA0DC2E8)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC2C0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+ioctl(0x3, 0x80086804, 0x700002490180)		 = 0 0
+close(0x3)		 = 0 0
+geteuid(0x0, 0x0, 0x0)		 = 0 0
+getuid(0x0, 0x0, 0x0)		 = 0 0
+gettid(0x70000248CDB8, 0x70000248CDBC, 0x0)		 = -1 Err#3
+geteuid(0x0, 0x0, 0x0)		 = 0 0
+getegid(0x0, 0x0, 0x0)		 = 0 0
+gettid(0x70000248CD98, 0x70000248CD9C, 0x0)		 = -1 Err#3
+geteuid(0x0, 0x0, 0x0)		 = 0 0
+getegid(0x0, 0x0, 0x0)		 = 0 0
+getattrlist("/Users\0", 0x106542028, 0x70000248AF60)dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+dtrace: error on enabled probe ID 2173 (ID 947: syscall::write_nocancel:return): invalid kernel access in action #12 at DIF offset 68
+		 = 0 0
+getattrlist("/Users/marhar\0", 0x106542028, 0x70000248AF60)		 = 0 0
+getattrlist("/Users/marhar/anaconda2\0", 0x106542028, 0x70000248AF60)		 = 0 0
+getattrlist("/Users/marhar/anaconda2/bin\0", 0x106542028, 0x70000248AF60)		 = 0 0
+getattrlist("/Users/marhar/anaconda2/bin/curl\0", 0x106542028, 0x70000248AF60)		 = 0 0
+stat64("/System/Library/PrivateFrameworks/Heimdal.framework/Heimdal\0", 0x70000248A960, 0x0)		 = 0 0
+getattrlist("/Users\0", 0x106542028, 0x70000248AF60)		 = 0 0
+getattrlist("/Users/marhar\0", 0x106542028, 0x70000248AF60)		 = 0 0
+getattrlist("/Users/marhar/anaconda2\0", 0x106542028, 0x70000248AF60)		 = 0 0
+getattrlist("/Users/marhar/anaconda2/bin\0", 0x106542028, 0x70000248AF60)		 = 0 0
+getattrlist("/Users/marhar/anaconda2/bin/curl\0", 0x106542028, 0x70000248AF60)		 = 0 0
+stat64("/System/Library/Frameworks/GSS.framework/GSS\0", 0x70000248A960, 0x0)		 = 0 0
+getuid(0x0, 0x0, 0x0)		 = 0 0
+proc_info(0x2, 0x25EC, 0x11)		 = 56 0
+necp_open(0x0, 0x0, 0x0)		 = 3 0
+getentropy(0x700002490520, 0x20, 0x0)		 = 0 0
+change_fdguard_np(0x3, 0x0, 0x0)		 = 0 0
+necp_client_action(0x3, 0x1, 0x7FC280E07290)		 = 0 0
+necp_client_action(0x3, 0x4, 0x7FC280E07290)		 = 129 0
+necp_client_action(0x3, 0x9, 0x700002490364)		 = 0 0
+necp_client_action(0x3, 0x8, 0x7FC280E08694)		 = 0 0
+necp_client_action(0x3, 0x8, 0x7FC280E086A8)		 = 0 0
+necp_client_action(0x3, 0x2, 0x7FC280E07290)		 = 0 0
+getuid(0x0, 0x0, 0x0)		 = 0 0
+proc_info(0x2, 0x25EC, 0x11)		 = 56 0
+necp_client_action(0x3, 0x1, 0x7FC280E07290)		 = 0 0
+necp_client_action(0x3, 0x4, 0x7FC280E07290)		 = 129 0
+necp_client_action(0x3, 0x2, 0x7FC280E07290)		 = 0 0
+socket(0x20, 0x2, 0x2)		 = 5 0
+setsockopt(0x5, 0xFFFF, 0x1022)		 = 0 0
+ioctl(0x5, 0xC0644E03, 0x700002490448)		 = 0 0
+connect_nocancel(0x5, 0x700002490378, 0x20)		 = 0 0
+setsockopt(0x5, 0xFFFF, 0x1002)		 = 0 0
+fcntl_nocancel(0x5, 0x3, 0x0)		 = 2 0
+fcntl_nocancel(0x5, 0x4, 0x6)		 = 0 0
+sendto_nocancel(0x5, 0x700002490610, 0x24)		 = 36 0
+recvfrom_nocancel(0x5, 0x700002490578, 0x38)		 = 56 0
+sendto_nocancel(0x5, 0x700002490610, 0x24)		 = 36 0
+recvfrom_nocancel(0x5, 0x700002490578, 0x38)		 = 56 0
+__disable_threadsignal(0x1, 0x0, 0x0)		 = 0 0
+select(0x0, 0x0, 0x0, 0x0, 0x7FFEEA0DC2E8)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC2C0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+socket(0x2, 0x1, 0x6)		 = 6 0
+setsockopt(0x6, 0x6, 0x1)		 = 0 0
+setsockopt(0x6, 0xFFFF, 0x1022)		 = 0 0
+setsockopt(0x6, 0xFFFF, 0x8)		 = 0 0
+setsockopt(0x6, 0x6, 0x101)		 = 0 0
+setsockopt(0x6, 0x6, 0x10)		 = 0 0
+fcntl(0x6, 0x3, 0x0)		 = 2 0
+fcntl(0x6, 0x4, 0x6)		 = 0 0
+connect(0x6, 0x7FFEEA0DBF00, 0x10)		 = -1 Err#36
+select(0x7, 0x7FFEEA0DC050, 0x7FFEEA0DBFD0, 0x7FFEEA0DBF50, 0x7FFEEA0DBF40)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+select(0x7, 0x7FFEEA0DC190, 0x7FFEEA0DC110, 0x7FFEEA0DC090, 0x7FFEEA0DC080)		 = 1 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC2C0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+select(0x7, 0x7FFEEA0DC050, 0x7FFEEA0DBFD0, 0x7FFEEA0DBF50, 0x7FFEEA0DBF40)		 = 1 0
+getsockopt(0x6, 0xFFFF, 0x1007)		 = 0 0
+getpeername(0x6, 0x7FFEEA0DC060, 0x7FFEEA0DBFDC)		 = 0 0
+getsockname(0x6, 0x7FFEEA0DBFE0, 0x7FFEEA0DBFDC)		 = 0 0
+sendto(0x6, 0x7FC280C096D0, 0x1C8)		 = 456 0
+select(0x7, 0x7FFEEA0DC090, 0x7FFEEA0DC010, 0x7FFEEA0DBF90, 0x7FFEEA0DBF80)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+select(0x7, 0x7FFEEA0DC190, 0x7FFEEA0DC110, 0x7FFEEA0DC090, 0x7FFEEA0DC080)		 = 1 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC2C0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+select(0x7, 0x7FFEEA0DC090, 0x7FFEEA0DC010, 0x7FFEEA0DBF90, 0x7FFEEA0DBF80)		 = 1 0
+recvfrom(0x6, 0x105EA5000, 0x19000)		 = 239 0
+fstat64(0x1, 0x7FFEEA0DBE28, 0x0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC168, 0x7FFEEA0DC190)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC278, 0x0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC308, 0x0)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC760)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC738, 0x0)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC680)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC658, 0x0)		 = 0 0
+close(0x6)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC658, 0x0)		 = 0 0
+sigaction(0xD, 0x0, 0x7FFEEA0DC6A0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC658, 0x0)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC658, 0x0)		 = 0 0
+madvise(0x105EA5000, 0x1A000, 0x9)		 = 0 0
+sigaction(0xD, 0x7FFEEA0DC738, 0x0)		 = 0 0
+

@@ -1,0 +1,56 @@
+#!/usr/bin/python
+"""
+curl -I http://url5878.vsobr.com/wf/click?upn=1HRMNt-2FVhl6L095IYnIbmvf-2Fzne19ubxd5-2FaqgqNN14s74ToAIJMkTQAvK-2B-2FbSu6FPS6gK0-2FLyHMoXScCmZp5oSet8W5jnReHpeU0op6GS8-3D_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeWuObxjrMAkUPkyN0-2BurewIuAPvRvyvtdPsRkiIRmUjk6kk2kHCprvuYwhA1qEGB7Dt-2BMBLAJk9VnUxz3kCFEoVgK4CMJeaKnMzhnN5-2FcBvl-2FMCAdjd7BYslYbpM6Yi1Q730Vi-2B4UNTtHic-2Fv1S-2BRm7lLuCWQyR1eaYOXS-2FindrA-3D-3D
+"""
+
+
+url='http://url5878.vsobr.com/wf/click?upn=1HRMNt-2FVhl6L095IYnIbmvf-2Fzne19ubxd5-2FaqgqNN14s74ToAIJMkTQAvK-2B-2FbSu6FPS6gK0-2FLyHMoXScCmZp5oSet8W5jnReHpeU0op6GS8-3D_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeWuObxjrMAkUPkyN0-2BurewIuAPvRvyvtdPsRkiIRmUjk6kk2kHCprvuYwhA1qEGB7Dt-2BMBLAJk9VnUxz3kCFEoVgK4CMJeaKnMzhnN5-2FcBvl-2FMCAdjd7BYslYbpM6Yi1Q730Vi-2B4UNTtHic-2Fv1S-2BRm7lLuCWQyR1eaYOXS-2FindrA-3D-3D'
+
+def x1():
+    import subprocess
+    process = subprocess.Popen(['curl', '-Is', url], stdout=subprocess.PIPE)
+    stdout, _ = process.communicate()
+    return stdout.replace('\r','')
+
+def x2headers(s):
+    print s.decode('iso-8859-1').strip()
+
+def x2safe():
+    import pycurl
+    from io import BytesIO
+    buffer = BytesIO()
+    c = pycurl.Curl()
+    c.setopt(c.URL, url)
+    c.setopt(c.WRITEDATA, buffer)
+    c.setopt(c.HEADERFUNCTION, headers)
+    print(c)
+    c.perform()
+    c.close()
+    return buffer.getvalue().decode('iso-8859-1').replace('\r','')
+
+def x2():
+    import pycurl
+    c = pycurl.Curl()
+    c.setopt(c.URL, url)
+    c.setopt(c.HEADERFUNCTION, x2headers)
+    c.perform()
+    c.close()
+
+def x3():
+    import urllib2
+    hdr = {
+        'User-Agent': 'hello',
+        'Accept': 'text/html',
+        'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+    }
+    req=urllib2.Request(url, headers=hdr)
+    response = urllib2.urlopen(req)
+    for line in response.info().headers:
+        print line.strip()
+
+print '----'
+print x1()
+print '----'
+print x2()
+print '----'
+print x3()

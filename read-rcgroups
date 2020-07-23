@@ -91,7 +91,7 @@ def main():
     nskipped = 0
     nerrored = 0
     totmsgs=len(data[0].split())
-    #print 'messages:',totmsgs
+    #print('messages:',totmsgs)
     i = 0
     for msgno in data[0].split():
         i += 1
@@ -112,11 +112,11 @@ def main():
         else:
             show(i, totmsgs, nskipped, "o", runstate)
             nskipped += 1
-            #print '# (skip)', h
+            #print('# (skip)', h)
         if DOIT: m.store(msgno, '+FLAGS', '\Deleted')
 
         if nshown >= N:
-            print '*** stopped after first %d, %d left'%(N,totmsgs-N)
+            print('*** stopped after first %d, %d left'%(N,totmsgs-N))
             break
 
     sys.stdout.write("\n%d opened %d skipped\n" % (nshown, nskipped))

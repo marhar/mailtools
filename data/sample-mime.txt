@@ -1,0 +1,231 @@
+Delivered-To: marhar@gmail.com
+Received: by 2002:a4a:8309:0:0:0:0:0 with SMTP id f9csp232074oog;
+        Tue, 13 Aug 2019 21:07:49 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqzpTqiyHH27QUMukV7bYBKwrJiGII36t9EbcDZx1bwuque36fX4s2Ggt5B04YDu55qNfVGi
+X-Received: by 2002:a17:906:3b02:: with SMTP id g2mr13097153ejf.10.1565755669832;
+        Tue, 13 Aug 2019 21:07:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1565755669; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vtrH04/q43tp6NKty0K5Z1iGy5ujVO0DTIsf66kAuZRmSielmsaf2WT2mixsFy6Pm6
+         6FZsxlr6F7AGvNdqoLq+RvEDJfekUKKiAoQjyKUDF5q4P5vREJtlCJsZExNWkifH0TcU
+         azqtpRESDrzoanq4P885hPye0wKxgZ1PsR2LEUgNcI6iqwdaEW4icIby1TIuXrTUY/jS
+         YKgG5hGJBmYmPviCiqw0ifw+cRW2Vu7Gda46BLvBZZPpwmhnDVeZRyOqtl53gAOcXHMB
+         mG0hXCpB9WM/PnwXa3ajGFhshXoITXLr3HYMabmW4P21q74Xu0MlhMm5RpMbHZi5kOUb
+         Fl8g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:mime-version:message-id:precedence:auto-submitted:from:to
+         :date:dkim-signature:dkim-signature;
+        bh=vE1f7ntoGABTgCk2HG7RPkuXIaOGI6esl5LC9xpKcIE=;
+        b=Ng16irL3iro/TU8qvyPOnH40/NqHput6DXZUxKQizD2JEKqNbPlrhx2DzoL4uFmayG
+         CgpdRuhg8+I87X9KasDGXFMRaPdmzmg+cFSmiYD9m59fhwS/6C2yI2dqgXRh/xnP+Gnh
+         NNA+y7mjqCVwTtZWE5gjFrJzC6kblDUsdcR3Hh8ZStPNtuBZtYJ2OXWNeh+nU8tZNo5P
+         HKKqdyiN50PPBuwidLvFyFYiqsbSY7zpAjY3C3H8hen40EHrzVejJ7JCJVHh35u4u5Sh
+         uWZePHP3QcWNEACV3C7Ab4SplST71O9zm7RMYQ4mt9DcbUauJasgkeiL5jpjbZ59kBHK
+         lPYw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@vsobr.com header.s=s1 header.b=NzsDKFHn;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=xXbXyKej;
+       spf=pass (google.com: domain of bounces+11091607-a9ad-marhar=gmail.com@em9803.vsobr.com designates 149.72.201.97 as permitted sender) smtp.mailfrom="bounces+11091607-a9ad-marhar=gmail.com@em9803.vsobr.com"
+Return-Path: <bounces+11091607-a9ad-marhar=gmail.com@em9803.vsobr.com>
+Received: from wrqvcwsk.outbound-mail.sendgrid.net (wrqvcwsk.outbound-mail.sendgrid.net. [149.72.201.97])
+        by mx.google.com with ESMTPS id y2si6320592edb.327.2019.08.13.21.07.49
+        for <marhar@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
+        Tue, 13 Aug 2019 21:07:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+11091607-a9ad-marhar=gmail.com@em9803.vsobr.com designates 149.72.201.97 as permitted sender) client-ip=149.72.201.97;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@vsobr.com header.s=s1 header.b=NzsDKFHn;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=xXbXyKej;
+       spf=pass (google.com: domain of bounces+11091607-a9ad-marhar=gmail.com@em9803.vsobr.com designates 149.72.201.97 as permitted sender) smtp.mailfrom="bounces+11091607-a9ad-marhar=gmail.com@em9803.vsobr.com"
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=vsobr.com; 
+	h=to:from:mime-version:subject:content-type; s=s1; 
+	bh=bidKkTiHnjx6xBJCYwSpB8pSVSM=; b=NzsDKFHnXlXXnICKHG+w954K/BGRd
+	mzP5r4C9+vp7VCmmyjyJyU6HbxuiPeOEPBzyXbTpRrwYN+Wx7u0nR0/Y0WSYQAr/
+	OIsz/ifn2AMnRYTylayxuTrrZyPXf0kISuZbWqRNptyf9VJsKkxZYUq16DK852o1
+	9tkzqIKV8S2a1I=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; 
+	h=to:from:mime-version:subject:content-type:x-feedback-id; 
+	s=smtpapi; bh=bidKkTiHnjx6xBJCYwSpB8pSVSM=; b=xXbXyKejLr2WNQpl24
+	UCz9vmNwSJd/aHUAw/WbRCQMobSu5Qj9W/5VBzaOH8GIvpe/FSIzA02qqYoJQaOs
+	JRy8slU3BDkm+vw3CR22qd6T2bRejCJ6CqTn9q54KYX9K0ST8XwTWoOEL6tJQiAr
+	bNU/3eCvAjsj4ZQ7LBytTyYt8=
+Received: by filter0014p3iad2.sendgrid.net with SMTP id filter0014p3iad2-31868-5D538914-7
+        2019-08-14 04:07:48.117674719 +0000 UTC m=+1588524.585450691
+Received: from mailgun-relay.c.verticalscope-production.internal (161.190.211.130.bc.googleusercontent.com [130.211.190.161])
+	by ismtpd0015p1iad1.sendgrid.net (SG) with ESMTP id kC6xnD2FTcaBPWpPUN729A
+	for <marhar@gmail.com>; Wed, 14 Aug 2019 04:07:48.016 +0000 (UTC)
+Received: from mailgun-relay (unknown [10.216.91.8])
+	by mailgun-relay.c.verticalscope-production.internal (Postfix) with ESMTP id 48B36A124F
+	for <marhar@gmail.com>; Wed, 14 Aug 2019 00:05:41 -0400 (EDT)
+Date: Wed, 14 Aug 2019 04:07:48 +0000 (UTC)
+To: marhar@gmail.com
+From: "RC Groups \(NOREPLY\)" <rcgroups.com@vsobr.com>
+Auto-Submitted: auto-generated
+Precedence: bulk
+Message-ID: <20190814040541.05231c71b7dd@8d873d32a7648c6939.vb_unknown.unknown>
+MIME-Version: 1.0
+X-Priority: 3
+X-Mailer: vBulletin Mail via PHP
+Subject: "Discussion Hobby King Bixler 2" update
+Content-type: multipart/alternative; boundary="----------=_1565755668-21553-1101"
+X-SG-EID: GUsJyeWbV930Zd/VJLOadLMzZjH49uCH6N0M+qR4xBG15qCpCz9Hx1QtPTmec+V5VGMOAinD2NQ2b6
+ uNtte/R4O3dkFwaU8n8TL/tyIaAseBGPqYs4uiB63xtie90F5N0CIGyNH/YoII78vVA886bIjJsJos
+ h6MSO4MPyU1WMugHw80Z8lQ3i7Xpc/hzO/jRO0i/9eFoodnbIwhLIdDf1RWoVzr2+7bo6FrAPm0k2w
+ 0=
+X-Feedback-ID: 11091607:BmDGwuFF6wYZSK/jU1e/Bo9mKAnj8nge2YidzNS1kG0=:BmDGwuFF6wYZSK/jU1e/Bo9mKAnj8nge2YidzNS1kG0=:SG
+
+This is a multi-part message in MIME format...
+
+------------=_1565755668-21553-1101
+Content-Type: text/plain; charset="ISO-8859-1"
+content-transfer-encoding: quoted-printable
+
+=0D
+=3D=3D=3D=3D=3D THIS IS AN AUTOMATED EMAIL. PLEASE DO NOT REPLY. =3D=3D=3D=
+=3D=3D=0D
+=0D
+Hello,=0D
+=0D
+You are subscribed to the thread "Hobby King Bixler 2" by Doubletap, there =
+have been 2 posts to this thread, the last poster was mutha.=0D
+http://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095IYnIbmvf-2Fzne19ub=
+xd5-2FaqgqNN14s74ToAIJMkTQAvK-2B-2FbSu6SgbxdnOixs8N5IJRafUkqcs8Wj-2BbH57GTZ=
+ypZIz1TTc-3D_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeuuT-2BVFGVrswex=
+2k2HzLp2CAxSw-2FL-2BvdOGFVNaPoaoCz4JyIBKFTcuHARPfkX2miIr3bacWe96tl7aHo7tb5U=
+W3RSEY9F47HFrzc8on1o-2FOUp1AbSsk85rplDuonM8mY5tac3i-2FR86q7ULYmdb8zRYC0JaoD=
+3SgbTjHEsizbtY2g-3D-3D=0D
+=0D
+These following posts were made to the thread:=0D
+************=0D
+=0D
+http://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095IYnIbmvf-2Fzne19ub=
+xd5-2FaqgqNN14s74ToAIJMkTQAvK-2B-2FbSu6bW4-2BDh3xq8CdvPeWWZoMaOy0Xv0mrEhyQ3=
+eIw9aTra0-3D_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeuuT-2BVFGVrswex=
+2k2HzLp2Nv1lcsQAgOPmtAJZepvMyETwi-2B3TkFkIfdy-2BXjhJVkzYeckhuUbtbEEr0S3ZOiO=
+KMw-2BkfV50EfmNP3CScPlMZ7MMKtWtchjj44fo-2F6qa-2B-2Ffwyi6h7mQTgIVW4f-2BXR8LI=
+BQFXvMNpuMD4JptnUQedCA-3D-3D=0D
+Posted by: ChinoDiablo=0D
+On: Aug 13, 2019 11:34 AM=0D
+=0D
+Here's a shout out for the Bixler 2.=0D
+Best plane to take to the beach!=0D
+20 minute slow flights over the ocean in constant breeze is about as relaxi=
+ng as an RC experience as you can get.=0D
+************=0D
+=0D
+http://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095IYnIbmvf-2Fzne19ub=
+xd5-2FaqgqNN14s74ToAIJMkTQAvK-2B-2FbSu635d1Z9q-2FDbkV281S2avRaNuMRF5pTqz3eF=
+-2FO-2B2685vk-3D_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeuuT-2BVFGVr=
+swex2k2HzLp2lmnvC-2Bw7JA1UGqJSrNIw71997LBsqrC-2Ft7XgS6QMNwLvzZdKPt993RQp8Wi=
+iO0xGs5ubJPV5sxwb59icXAH10o831clnvA113HGYqZSrgXUlhb3-2BfNEOlrMIFt3cSFeLnABC=
+POi8XMOx-2FEXwlb4jiA-3D-3D=0D
+Posted by: mutha=0D
+On: Aug 13, 2019 05:08 PM=0D
+=0D
+=0D
+---Quote (Originally by ChinoDiablo)---=0D
+Here's a shout out for the Bixler 2.=0D
+Best plane to take to the beach!=0D
+20 minute slow flights over the ocean in constant breeze is about as relaxi=
+ng as an RC experience as you can get.=0D
+---End Quote---=0D
+Absolutely ! :D=0D
+=0D
+=0D
+Yours,=0D
+RC Groups team=0D
+=0D
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=0D
+THIS IS AN AUTOMATED EMAIL.=0D
+PLEASE DO NOT REPLY TO THIS EMAIL.=0D
+If you have questions, please use our contacts page:=0D
+http://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095IYnIbmvf-2Fzne19ub=
+xd5-2FaqgqNN177yQKauVQFtomubF-2FkQxZiEaT0Oyd1xyqlP2pkbdJOLw-3D-3D_SuJVuXlBI=
+1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeuuT-2BVFGVrswex2k2HzLp2rjzHTeH5VLbXuK=
+rrE3Zq9ZIhobITOApjEOCxU6b8BmH9xMlfrNqwP5VGW1U083ChLSqbf1U4Sxcg2XukMtgFLsxyu=
+WGSDq2A7xxlYlkxOZc-2Bo0QQybBc-2F0Q85B3ZnWW4ih1pecgaxgDIIwaaj0ZMuw-3D-3D=0D
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~=0D
+Unsubscription information:=0D
+=0D
+To unsubscribe from this thread, please visit this page:=0D
+http://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095IYnIbmvf-2Fzne19ub=
+xd5-2FaqgqNN14I3SlYZNyQydjHjhX8YZJw5jutjEDihuQqRyRtVDJXZA6fI-2Btyi-2BM2KIT1=
+tK0lxxOKZqjFYAQlM3EK87lih8LH_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKib=
+euuT-2BVFGVrswex2k2HzLp2rroAUMsi8JvbkVxHoG9nfRLg1nx0UQFvCT0uZcYdOAx-2B6E-2F=
+tLhlfcw8WsIWHAj1wr-2BaP0-2BJOPBI3IE4zm2ldx4VfVAkbDODcPayg-2BoodCTiHMhajD9He=
+0vLGVLM4hfVyfqoHDaxav1j71exmwacB6Q-3D-3D
+
+------------=_1565755668-21553-1101
+Content-Type: text/html; charset="ISO-8859-1"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+<html><body>
+<p>=3D=3D=3D=3D=3D THIS IS AN AUTOMATED EMAIL. PLEASE DO NOT REPLY. =3D=3D=
+=3D=3D=3D</p>
+<p>Hello,</p>
+<p>You are subscribed to the thread &ldquo;Hobby King Bixler 2&rdquo; by Do=
+ubletap, there have been 2 posts to this thread, the last poster was mutha.=
+ <a href=3D"http://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095IYnIbm=
+vf-2Fzne19ubxd5-2FaqgqNN14s74ToAIJMkTQAvK-2B-2FbSu6SgbxdnOixs8N5IJRafUkqcs8=
+Wj-2BbH57GTZypZIz1TTc-3D_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeuuT=
+-2BVFGVrswex2k2HzLp2uAdjUffEFhXNVuIWxmrPx59hAMMT9I4DHeBWmZVl-2FPJMIJhGhQYgM=
+RwAHW-2FtthkdVnyai7Y8RUMg-2BGc-2FveEHDrGtIm53-2BT1uAhQEGu7DxbXrilFfaOSgp6QD=
+Rx53AsQPRv-2FTq95y-2FSKocqiU3Yme8A-3D-3D">https://www.rcgroups.com/forums/s=
+howthread.php?t=3D1703262</a></p>
+<p>These following posts were made to the thread: <strong>*********</strong=
+>*</p>
+<p><a href=3D"http://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095IYnI=
+bmvf-2Fzne19ubxd5-2FaqgqNN14s74ToAIJMkTQAvK-2B-2FbSu6bW4-2BDh3xq8CdvPeWWZoM=
+aOy0Xv0mrEhyQ3eIw9aTra0-3D_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeu=
+uT-2BVFGVrswex2k2HzLp2Th0xkf0m3q4fJXtX5fZ4y7xtbtsOxpUyFCv4JlFd2O6W2yPAPVFi0=
+VIDlGWn615-2FWpbvgzRmrALhTLr9wXkB8DxwVQp6UjB08QJ03D25g9Nvw9GgdYLswATGUDd5ru=
+-2BduCBtfQOkFQ4LBCZPw8VI1g-3D-3D">https://www.rcgroups.com/forums/showthrea=
+d.php?p=3D42511413#post42511413</a> Posted by: ChinoDiablo On: Aug 13, 2019=
+ 11:34 AM</p>
+<p>Here's a shout out for the Bixler 2. Best plane to take to the beach! 20=
+ minute slow flights over the ocean in constant breeze is about as relaxing=
+ as an RC experience as you can get. <strong>*********</strong>*</p>
+<p><a href=3D"http://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095IYnI=
+bmvf-2Fzne19ubxd5-2FaqgqNN14s74ToAIJMkTQAvK-2B-2FbSu635d1Z9q-2FDbkV281S2avR=
+aNuMRF5pTqz3eF-2FO-2B2685vk-3D_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kK=
+ibeuuT-2BVFGVrswex2k2HzLp2JgijYbPiByC98eDCuB0W8ju-2FjxGzLVlK-2BwpOOAE0fAYBw=
+EDZ8rUtv-2FSKWcJGakqNxGlGzqifC6qobNyr4fh77-2Bie4H8wY0Zoiq6iYKvMk3YVNmvP4QnR=
+jvUWAmqFbIyZU2h-2ByXsI0CxBYUD5E6v-2B-2Fg-3D-3D">https://www.rcgroups.com/fo=
+rums/showthread.php?p=3D42513579#post42513579</a> Posted by: mutha On: Aug =
+13, 2019 05:08 PM</p>
+<p>---Quote (Originally by ChinoDiablo)--- Here's a shout out for the Bixle=
+r 2. Best plane to take to the beach! 20 minute slow flights over the ocean=
+ in constant breeze is about as relaxing as an RC experience as you can get=
+. ---End Quote--- Absolutely ! :D</p>
+<p>Yours, RC Groups team</p>
+<p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ THIS IS AN AUTOMATED EMAIL. PLEASE=
+ DO NOT REPLY TO THIS EMAIL. If you have questions, please use our contacts=
+ page: <a href=3D"http://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095=
+IYnIbmvf-2Fzne19ubxd5-2FaqgqNN177yQKauVQFtomubF-2FkQxZiEaT0Oyd1xyqlP2pkbdJO=
+Lw-3D-3D_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeuuT-2BVFGVrswex2k2H=
+zLp2FZgeudNZ6-2BOIe2zofX0JgSiceq3jOlXSNCWsiWPxu6ZQyOm9AkooDUKb14Daq-2BteHXj=
+3SEEy0mDVgFpT90uxpZW7Q5ZuZ63RxzILP-2BuXRE5xx7H9lfUE9rw-2FUw36wQmr6ST8-2B8eM=
+LlrMCY0SLhPa8Q-3D-3D">https://www.rcgroups.com/forums/contacts.php</a> ~~~~=
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Unsubscription information:</p>
+<p>To unsubscribe from this thread, please visit this page: <a href=3D"http=
+://url5878.vsobr.com/wf/click?upn=3D1HRMNt-2FVhl6L095IYnIbmvf-2Fzne19ubxd5-=
+2FaqgqNN14I3SlYZNyQydjHjhX8YZJw5jutjEDihuQqRyRtVDJXZA6fI-2Btyi-2BM2KIT1tK0l=
+xxOKZqjFYAQlM3EK87lih8LH_SuJVuXlBI1KDlGJOfEpQFRaFI4g-2Bl-2BgWLqTpj6kKibeuuT=
+-2BVFGVrswex2k2HzLp2tzu6YNNcE-2BYJ-2FZpsskmqHIJ2MB4V-2BG4lfM3irIVO1JHa6EArj=
+qfqrLTEQKE31gDWywVpsCd6M1EupFa-2FxM-2FFviAfamxYUwLzRmHDOnxymvbFCdObtOym0i-2=
+FjoPaCG7uOI397lTfi0aPDKRx-2Fha0unQ-3D-3D">https://www.rcgroups.com/forums/s=
+ubscription.php?do=3Dusub&amp;threadid=3D1703262</a></p>
+
+<img src=3D"http://url5878.vsobr.com/wf/open?upn=3DSuJVuXlBI1KDlGJOfEpQFRaF=
+I4g-2Bl-2BgWLqTpj6kKibeuuT-2BVFGVrswex2k2HzLp2hwGoWMxT7y8hX9hmcQgyACo07Hz5a=
+0ttkL8yJuCbPN8q8LU-2Blq2i2gj7esJF8PAPeYg4JilMF24JUo5qcX9UxkSbuEZArnMjSUuKxf=
+e3PdFneoAKW7937mKPNPNpvJ2xZJ1h3Kxs6VmKz7obTrglurwHgf-2FPyGQ7GJ-2BJpuUKags-3=
+D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !impo=
+rtant;width:1px !important;border-width:0 !important;margin-top:0 !importan=
+t;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !impor=
+tant;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !=
+important;padding-left:0 !important;"/>
+</body></html>
+
+------------=_1565755668-21553-1101--

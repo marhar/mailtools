@@ -1,0 +1,107 @@
+Delivered-To: marhar@gmail.com
+Received: by 2002:a4a:8309:0:0:0:0:0 with SMTP id f9csp233148oog;
+        Tue, 13 Aug 2019 21:09:19 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwPmWHrchUii1AYycw5luAQUs/UIUcXJVnGRPfS6MSHQ0pb062r7v/HMuI/0OMRi++AjRwf
+X-Received: by 2002:a37:464a:: with SMTP id t71mr36299179qka.436.1565755759014;
+        Tue, 13 Aug 2019 21:09:19 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1565755759; cv=none;
+        d=google.com; s=arc-20160816;
+        b=EqrPcemxSsdQ0xxpzj1l4YkumSF+ZVdnG/a8rE8ytGYxlCYVPJuH/8Uau5MPD6votd
+         RutmgNONYgO8Q17mUfD59GTmm7rdr2RXLR2e4sGoJdhW1sRFw3GN2WKzeShkj9bM6lLl
+         7wx/QBt1Hm4WfIYkTJSY/Gxz66UhF/WR/x2zU2rJxSOQkBP/2ATsYMHsJne9hDu9Prel
+         cqFQM2q7DyQavpx7SpyyrHaVRgiJRqN0p5Zfs9bnYaPCw5eWYJypvobFYNNRxOEJlDcz
+         7e0KW5X+BkCAICiDLG6EM9plSVTQoVpJadheaextCNvNta6J7kKAmfbzrvChl761tY5f
+         08Mg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:content-transfer-encoding:mime-version:message-id
+         :precedence:auto-submitted:from:to:date:sender:dkim-signature
+         :dkim-signature;
+        bh=yyhS+k/HAL+W4Mz5K2M5YadOdzw7evouMTnusnce8LE=;
+        b=XwJkouHWvtUfFbTnWzIilMVXfruovOOdfuz24CVJzeVhThpUKq1ohXltdV5BuFldnT
+         eQba7kTmf9yFGbSZKL/rCdz+xr03Ys2SYZ3fjh83ueT51nw2aUDzm5PJC7G4zfhWZLOL
+         2rUZRohlrbU96nWZpW1vwyH24zxq99oC66x3t/hiRPZ/VynSQauXXW/c2Hzqd3MC+q/V
+         A0Y3N+4PRA6CsKzfUAT3/7nwVDHMdXFNTDzDfAmWgTKB+2qJg4gGk4LxQs5c2IfZDcB8
+         1IugKuKaCP3NiuJ05ex2vvhdjQ0ObfH9rhmzJmWn/Y2+nbxDMMqdeVfce06n0yRLcQ6L
+         TlcA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mg.vscope.cloud header.s=mailo header.b=GI30aKan;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=TDvFzj8J;
+       spf=pass (google.com: domain of bounce+037d8b.d775db-marhar=gmail.com@mg.vscope.cloud designates 104.130.123.108 as permitted sender) smtp.mailfrom="bounce+037d8b.d775db-marhar=gmail.com@mg.vscope.cloud"
+Return-Path: <bounce+037d8b.d775db-marhar=gmail.com@mg.vscope.cloud>
+Received: from relay7.verticalscope.com (relay7.verticalscope.com. [104.130.123.108])
+        by mx.google.com with UTF8SMTPS id n36si24013432qvc.49.2019.08.13.21.09.18
+        for <marhar@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 13 Aug 2019 21:09:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+037d8b.d775db-marhar=gmail.com@mg.vscope.cloud designates 104.130.123.108 as permitted sender) client-ip=104.130.123.108;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mg.vscope.cloud header.s=mailo header.b=GI30aKan;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=TDvFzj8J;
+       spf=pass (google.com: domain of bounce+037d8b.d775db-marhar=gmail.com@mg.vscope.cloud designates 104.130.123.108 as permitted sender) smtp.mailfrom="bounce+037d8b.d775db-marhar=gmail.com@mg.vscope.cloud"
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.vscope.cloud; q=dns/txt;
+ s=mailo; t=1565755758; h=Subject: Content-Transfer-Encoding:
+ Content-Type: MIME-Version: Message-ID: From: To: Date: Sender:
+ X-Feedback-Id; bh=yyhS+k/HAL+W4Mz5K2M5YadOdzw7evouMTnusnce8LE=; b=GI30aKanNWbJWwH/3edbpJq4dpdBvq3w4FcbYXdSIV6s+iYwRczV96EnrEgIFRBnazzwBmic
+ DvxBdfbTfR+KU9B381/31ARw3aq+/wg5920/V2upTdjW1HR6xUgfKvfzU/6PFgrXlPF5/bFQ
+ sTo24DKj8ni3wvIy5BFh84LVZoY=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg;
+ t=1565755758; h=Subject: Content-Transfer-Encoding: Content-Type:
+ MIME-Version: Message-ID: From: To: Date: Sender: X-Feedback-Id;
+ bh=yyhS+k/HAL+W4Mz5K2M5YadOdzw7evouMTnusnce8LE=; b=TDvFzj8J1OiHzgoq90QZo4Xv6hgmAwjbkYW8r3ODuD0lNY5bT3aFfxtnk1GdsVVf7toUC9NO
+ /mZ3zTlS2WiYNxqt9DCCpeKyXlEtBA00zkFzAvwpaqJ7OGOvDYklGbaWCe/7A3UqjlRGGSGB
+ tFd1HrGlb6DbshOfbkF1X0T9AoA=
+X-Feedback-Id: 57c718a80e6fc44b7d6f7806:mailgun
+X-Mailgun-Sending-Ip: 104.130.123.108
+X-Mailgun-Sid: WyI4Njk4YSIsICJtYXJoYXJAZ21haWwuY29tIiwgImQ3NzVkYiJd
+Sender: rcgroups.com=vsobr.com@mg.vscope.cloud
+Received: from mailgun-relay.c.verticalscope-production.internal (161.190.211.130.bc.googleusercontent.com [130.211.190.161])
+ by mxa.mailgun.org with ESMTP id 5d53896e.7f02126de3f8-smtp-out-n03;
+ Wed, 14 Aug 2019 04:09:18 -0000 (UTC)
+Received: from mailgun-relay (unknown [10.216.91.8])
+	by mailgun-relay.c.verticalscope-production.internal (Postfix) with ESMTP id B3615A0D7F
+	for <marhar@gmail.com>; Wed, 14 Aug 2019 00:08:34 -0400 (EDT)
+Date: Wed, 14 Aug 2019 04:08:34 +0000
+To: marhar@gmail.com
+From: "RC Groups \(NOREPLY\)" <rcgroups.com@vsobr.com>
+Auto-Submitted: auto-generated
+Precedence: bulk
+Message-ID: <20190814040834.27b86eb1f644@770613167e8020454e.vb_unknown.unknown>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="ISO-8859-1"
+Content-Transfer-Encoding: 8bit
+X-Priority: 3
+X-Mailer: vBulletin Mail via PHP
+Subject: "Scratchbuilt Multirotor Drones" update
+
+
+===== THIS IS AN AUTOMATED EMAIL. PLEASE DO NOT REPLY. =====
+Dear marhar,
+
+You are subscribed to the forum Scratchbuilt Multirotor Drones, there have been 0 new thread(s) and 1 updated thread(s).
+https://www.rcgroups.com/forums/forumdisplay.php?f=791
+
+The following threads are new:
+
+
+The following threads have been updated:
+************
+Discussion Mini tubular and ultralight LOS Acro+FPV Quads
+https://www.rcgroups.com/forums/showthread.php?t=2645953
+In forum: Scratchbuilt Multirotor Drones
+Started by: TimR74
+Last post: Aug 13, 2019 02:47 PM
+
+
+All the best,
+RC Groups
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+THIS IS AN AUTOMATED EMAIL.
+PLEASE DO NOT REPLY TO THIS EMAIL.
+If you have questions, please use our contacts page:
+https://www.rcgroups.com/forums/contacts.php
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unsubscription information:
+
+To unsubscribe from this forum, please visit this page:
+https://www.rcgroups.com/forums/subscription.php?do=removesubscription&type=forum&subscriptionid=77439&auth=dcd1507de0ccf29c8a6ad7b13f83febd

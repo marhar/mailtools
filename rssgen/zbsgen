@@ -1,6 +1,7 @@
 #!/bin/sh
 # simplest rss generator, to get audiobooks into downcast
 # usage rssgen prefix url files...
+# TODO: resize images
 
 if test $# -lt 3; then
   echo usage: rssgen prefix url files... 1>&2
@@ -20,21 +21,24 @@ echo '   <description>'$ALBUM'</description>'
 echo '   <link>'$url'/'$prefix'.rss</link>'
 echo '   <atom:link href="'$url'/'$prefix'.rss" rel="self" type="application/rss+xml" />'
 echo '   <image>'
-echo '    <url>'$url'/_images/'$prefix'.png</url>'
-echo '    <link>'$url'</link>'
+echo '    <url>'$url'/_images/'$prefix'.jpg</url>'
+echo '    <link>'$url'/'$prefix'.rss</link>'
 echo '    <title>'$ALBUM'</title>'
 echo '    <description>'$ALBUM'</description>'
 echo '   </image>'
 
 n=0
+secs=315446401
 for i in "$@"; do
     n=`expr $n + 1`
+    secs=`expr $secs + 86400`
+    datestr=`echo 'puts [clock format '$secs' -gmt 1 -format "%a %d %b %Y %T %Z"]' |tclsh`
     TITLE=`exiftool -Title $i | sed -e 's/.*: //'|sed 's/&/&amp;/g'`
     album=`exiftool -Album $i | sed -e 's/.*: //'|sed 's/&/&amp;/g'`
     track=`exiftool -Track $i | sed -e 's/.*: //'|sed 's/&/&amp;/g'`
     DESC="$album $track"
-    PUBDATE=`date`
     PUBDATE='Tue, 19 Oct 2004 13:38:55 -0400'
+    PUBDATE=$datestr
     UUID=`uuidgen`
     LEN=`ls -l $i |awk '{print $5}'`
     echo '   <item>'
