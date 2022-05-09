@@ -19,7 +19,7 @@ https://github.com/marhar/mailtools   :     Share and Enjoy!
 """
 
 #-----------------------------------------------------------------------
-import sys,time,os,email, urllib2
+import sys,time,os,email, urllib.request, urllib.error, urllib.parse
 import mailcfg
 
 #-----------------------------------------------------------------------
@@ -32,32 +32,39 @@ def doopen(url):
     #time.sleep(.25)  # this delay seems to makes opening smoother
 
 #-----------------------------------------------------------------------
-def url(email_text):
+def url(zzemail_text):
     """look for the strings that indicate unread forums or threads.
        rcgroups keeps changing the message format, so we adjust whenever
        we notice things not working.
     """
-    msg = email.message_from_string(email_text)
-    for part in msg.walk():
+    zzmsg = email.message_from_string(zzemail_text)
+    import pudb;pudb.set_trace()
+    for part in zzmsg.walk():
+        print('part', part.get_content_type())
         if part.get_content_type() == 'text/plain':
-            for line in part.get_payload(decode=True).split('\n'):
+            for line in part.get_payload(decode=True).split(b'\n'):
                 line=line.strip()
-                if line.startswith('http://url5878.vsobr.com'):
+                if line.startswith(b'http://url5878.vsobr.com'):
                     class NoRedirection(urllib2.HTTPErrorProcessor):
                         def http_response(self, request, response):
+                            print(666666)
                             return ',',response
                         https_response = http_response
-                    opener = urllib2.build_opener(NoRedirection)
-                    urllib2.install_opener(opener)
-                    req=urllib2.Request(line)
-                    response = urllib2.urlopen(req)
+                    opener = urllib.request.build_opener(NoRedirection)
+                    urllib.request.install_opener(opener)
+                    req=urllib.request.Request(line)
+                    response = urllib.request.urlopen(req)
                     for cline in response.info().headers:
                         x = cline.split()
                         if x[0] == 'Location:':
+                            print(7777777)
                             return '.',x[1]+'&goto=newpost'
+                    print(88888)
                     return None
-                if line.startswith('https://www.rcgroups.com'):
+                if line.startswith(b'https://www.rcgroups.com'):
+                    print(99999)
                     return '.',line+'&goto=newpost'
+    print(5555555)
 #-----------------------------------------------------------------------
 def main():
     """Our main business is not to see what lies dimly at a
@@ -97,12 +104,12 @@ def main():
         i += 1
         rc,data=m.fetch(msgno,'(RFC822)')
         mailcfg.ok(rc,data)
-        body=email.message_from_string(data[0][1])
+        body=email.message_from_string(str(data[0][1]))
         signal,h=url(str(body))
         if h is None:
             nerrored += 1
             show(i, totmsgs, nskipped, "E", runstate)
-        elif seen.has_key(h) == False:
+        elif (h in seen) == False:
             nshown += 1
             seen[h] = 1
             logger.write("open '" +h + "'\n")
@@ -116,7 +123,7 @@ def main():
         if DOIT: m.store(msgno, '+FLAGS', '\Deleted')
 
         if nshown >= N:
-            print('*** stopped after first %d, %d left'%(N,totmsgs-N))
+            print(('*** stopped after first %d, %d left'%(N,totmsgs-N)))
             break
 
     sys.stdout.write("\n%d opened %d skipped\n" % (nshown, nskipped))

@@ -9,7 +9,7 @@ This is part of the mailtools package : (c) 2015 Mark Harrison.
 https://github.com/marhar/mailtools   :     Share and Enjoy!
 """
 
-import os,imaplib,ConfigParser
+import os,imaplib,configparser
 
 #-----------------------------------------------------------------------
 class MailtoolsError(Exception):
@@ -52,10 +52,10 @@ def imapserver(server,fname=None):
 
     # imap file can't be readable by other people!
     s=os.stat(fname)
-    if s.st_mode & 0077 != 0:
+    if s.st_mode & 0o077 != 0:
         raise MailtoolsError('%s must not be readable by others'%(fname))
 
-    cfg=ConfigParser.ConfigParser()
+    cfg=configparser.ConfigParser()
     cfg.read(fname)
     x={}
     for k,v in cfg.items(server):
