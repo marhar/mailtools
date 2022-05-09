@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/emersion/go-imap"
 	"github.com/emersion/go-imap/client"
+	"github.com/emersion/go-message/mail"
 	"log"
 	"os"
 	"os/user"
@@ -25,12 +26,12 @@ func check(e error) {
 	}
 }
 
-func showRCG(c *client.Client) {
+func showSubjects(c *client.Client) {
 	mbox, err := c.Select("[Gmail]/rcgroups", false)
 	check(err)
 	log.Println("Flags for [Gmail]/rcgroups:", mbox.Flags)
 	seqset := new(imap.SeqSet)
-	seqset.AddRange(1, 99999)
+	seqset.AddRange(1, mbox.Messages)
 
 	messages := make(chan *imap.Message, 10)
 	done := make(chan error, 1)
@@ -43,6 +44,53 @@ func showRCG(c *client.Client) {
 	}
 	err = <-done
 	check(err)
+}
+
+func showBodies(c *client.Client) {
+	mbox, err := c.Select("[Gmail]/rcgroups", false)
+	check(err)
+	seqset := new(imap.SeqSet)
+	//seqset.AddRange(1, mbox.Messages)
+	_ = mbox
+	seqset.AddRange(1, 1)
+
+	var section imap.BodySectionName
+	items := []imap.FetchItem{section.FetchItem()}
+	messages := make(chan *imap.Message, 1)
+	go func() {
+		err := c.Fetch(seqset, items, messages)
+		check(err)
+	}()
+
+	msg := <-messages
+	if msg == nil {
+		log.Fatal("Server didn't returned message")
+	}
+
+	r := msg.GetBody(&section)
+	if r == nil {
+		log.Fatal("Server didn't returned message body")
+	}
+	// Create a new mail reader
+	mr, err := mail.CreateReader(r)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	header := mr.Header
+	if date, err := header.Date(); err == nil {
+		log.Println("Date:", date)
+	}
+	if from, err := header.AddressList("From"); err == nil {
+		log.Println("From:", from)
+	}
+	if to, err := header.AddressList("To"); err == nil {
+		log.Println("To:", to)
+	}
+	if subject, err := header.Subject(); err == nil {
+		log.Println("Subject:", subject)
+	}
+
 }
 func listMailboxes(c *client.Client) {
 	mailboxes := make(chan *imap.MailboxInfo, 10)
@@ -75,5 +123,6 @@ func main() {
 	defer c.Logout()
 
 	//listMailboxes(c)
-	showRCG(c)
+	//showSubjects(c)
+	showBodies(c)
 }
