@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/emersion/go-imap"
 	"github.com/emersion/go-imap/client"
+	_ "github.com/emersion/go-message/charset"
 	"github.com/emersion/go-message/mail"
 	"log"
 	"os"
@@ -29,7 +30,7 @@ func check(e error) {
 func showSubjects(c *client.Client) {
 	mbox, err := c.Select("[Gmail]/rcgroups", false)
 	check(err)
-	log.Println("Flags for [Gmail]/rcgroups:", mbox.Flags)
+	fmt.Println("Flags for [Gmail]/rcgroups:", mbox.Flags)
 	seqset := new(imap.SeqSet)
 	seqset.AddRange(1, mbox.Messages)
 
@@ -46,6 +47,16 @@ func showSubjects(c *client.Client) {
 	check(err)
 }
 
+func doSearch(c *client.Client) {
+	_, err := c.Select("[Gmail]/rcgroups", false)
+	check(err)
+	x, err := c.Search(&imap.SearchCriteria{Body: []string{"FliteTest"}})
+	check(err)
+	fmt.Println(x)
+	x, err = c.UidSearch(&imap.SearchCriteria{Body: []string{"FliteTest"}})
+	check(err)
+	fmt.Println(x)
+}
 func showBodies(c *client.Client) {
 	mbox, err := c.Select("[Gmail]/rcgroups", false)
 	check(err)
@@ -79,16 +90,16 @@ func showBodies(c *client.Client) {
 
 	header := mr.Header
 	if date, err := header.Date(); err == nil {
-		log.Println("Date:", date)
+		fmt.Println("Date:", date)
 	}
 	if from, err := header.AddressList("From"); err == nil {
-		log.Println("From:", from)
+		fmt.Println("From:", from)
 	}
 	if to, err := header.AddressList("To"); err == nil {
-		log.Println("To:", to)
+		fmt.Println("To:", to)
 	}
 	if subject, err := header.Subject(); err == nil {
-		log.Println("Subject:", subject)
+		fmt.Println("Subject:", subject)
 	}
 
 }
@@ -107,7 +118,7 @@ func listMailboxes(c *client.Client) {
 	check(err)
 }
 
-func main() {
+func connectToMail() (*client.Client, error) {
 	user, err := user.Current()
 	check(err)
 	cfgfile := filepath.Join(user.HomeDir, ".imap.json")
@@ -115,14 +126,61 @@ func main() {
 	check(err)
 	cfg := imapInfo{}
 	_ = json.Unmarshal(dat, &cfg)
-	c, err := client.DialTLS(cfg.Imap, nil)
+	c, err := client.DialTLS(cfg.Imap+":993", nil)
 	check(err)
 	err = c.Login(cfg.Login, cfg.Passwd)
 	check(err)
-	log.Println("Logged in")
-	defer c.Logout()
+	return c, nil
+}
 
+type rcgMessage struct {
+	msgno int
+	body  string
+}
+
+func fetchRcgMessages(c *client.Client) []rcgMessage {
+	mbox, err := c.Select("[Gmail]/rcgroups", false)
+	check(err)
+	seqset := new(imap.SeqSet)
+	seqset.AddRange(1, mbox.Messages)
+
+	messages := make(chan *imap.Message, 10)
+	done := make(chan error, 1)
+	go func() {
+		done <- c.Fetch(seqset, []imap.FetchItem{imap.FetchEnvelope}, messages)
+	}()
+	var results []rcgMessage
+	for msg := range messages {
+		fmt.Println("=======================================================================================")
+		fmt.Println("* " + msg.Envelope.Subject)
+		fmt.Println(msg.Envelope.MessageId)
+		msg.BodyStructure.Walk(func(path []int, part *imap.BodyStructure) (walkChildren bool) {
+			fmt.Println(path)
+			_ = part
+			return true
+		})
+	}
+	err = <-done
+	check(err)
+	return results
+}
+
+func main() {
+
+	c, err := connectToMail()
+	check(err)
+	defer c.Logout()
+	fetchRcgMessages(c)
+
+	/*	connect
+			get list of rcg messages
+		   	loop over messages
+				extract url
+				open url
+			delete message
+	*/
 	//listMailboxes(c)
 	//showSubjects(c)
-	showBodies(c)
+	//showBodies(c)
+	//doSearch(c)
 }

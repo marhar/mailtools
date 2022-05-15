@@ -7,6 +7,7 @@ import (
 	"os"
 	"os/user"
 	"path/filepath"
+	"strconv"
 )
 
 type imapInfo struct {
@@ -34,13 +35,23 @@ func check(e error) {
 		panic(e)
 	}
 }
-func main() {
+
+func imapConnect() (*imap.Dialer, error) {
 	var cfg imapInfo
-	err := readMailConfig(&cfg)
-	check(err)
-	fmt.Println(cfg)
+	if err := readMailConfig(&cfg); err != nil {
+		return nil, err
+	}
 	//imap.Verbose = true
 	im, err := imap.New(cfg.Login, cfg.Passwd, cfg.Imap, 993)
+	if err != nil {
+		return nil, err
+	}
+	return im, nil
+}
+
+func main() {
+
+	im, err := imapConnect()
 	check(err)
 	defer im.Close()
 
@@ -61,11 +72,17 @@ func main() {
 	if len(emails) == 0 {
 		return
 	}
-	for _, v := range emails {
-		fmt.Println("--------------------------------------------------")
+	for zz, v := range emails {
+		fd, err := os.Create("/tmp/posts/" + strconv.Itoa(zz))
+		check(err)
+		defer fd.Close()
+		fd.WriteString(v.Text)
+		fmt.Println("----------------------------------------------------------------------------------------------------")
+		fmt.Println(zz)
 		fmt.Println(v.Subject)
 		fmt.Println(v.MessageID)
-		fmt.Println(v.Text)
+		fmt.Println(v.Flags)
+		//fmt.Println(v.Text)
 
 	}
 
